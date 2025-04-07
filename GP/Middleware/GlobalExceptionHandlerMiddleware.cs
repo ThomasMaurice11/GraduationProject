@@ -8,16 +8,13 @@ namespace GP.Middleware
     {
         private readonly RequestDelegate _next;
         private readonly ILogger<GlobalExceptionHandlerMiddleware> _logger;
-        private readonly IHostEnvironment _env;
 
         public GlobalExceptionHandlerMiddleware(
             RequestDelegate next,
-            ILogger<GlobalExceptionHandlerMiddleware> logger,
-            IHostEnvironment env)
+            ILogger<GlobalExceptionHandlerMiddleware> logger)
         {
             _next = next;
             _logger = logger;
-            _env = env;
         }
 
         public async Task InvokeAsync(HttpContext context)
@@ -28,55 +25,40 @@ namespace GP.Middleware
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, ex.Message);
+                _logger.LogError(ex, "An error occurred");
                 await HandleExceptionAsync(context, ex);
             }
         }
 
-        private async Task HandleExceptionAsync(HttpContext context, Exception exception)
+        private static async Task HandleExceptionAsync(HttpContext context, Exception ex)
         {
             context.Response.ContentType = "application/json";
-            var response = new ErrorResponse();
 
-            switch (exception)
+            var response = new ErrorResponse
             {
-                case AppException ex:
-                    context.Response.StatusCode = ex.StatusCode;
-                    response.StatusCode = ex.StatusCode;
-                    response.ErrorType = ex.ErrorType;
-                    response.Message = ex.Message;
-                    break;
-
-                case KeyNotFoundException ex:
-                    context.Response.StatusCode = StatusCodes.Status404NotFound;
-                    response.StatusCode = StatusCodes.Status404NotFound;
-                    response.ErrorType = "Not Found";
-                    response.Message = ex.Message;
-                    break;
-
-                case UnauthorizedAccessException ex:
-                    context.Response.StatusCode = StatusCodes.Status401Unauthorized;
-                    response.StatusCode = StatusCodes.Status401Unauthorized;
-                    response.ErrorType = "Unauthorized";
-                    response.Message = ex.Message;
-                    break;
-
-                default:
-                    context.Response.StatusCode = StatusCodes.Status500InternalServerError;
-                    response.StatusCode = StatusCodes.Status500InternalServerError;
-                    response.ErrorType = "Internal Server Error";
-                    response.Message = _env.IsDevelopment() ? exception.Message : "An unexpected error occurred";
-                    response.StackTrace = _env.IsDevelopment() ? exception.StackTrace : null;
-                    break;
-            }
-
-            var jsonOptions = new JsonSerializerOptions
-            {
-                PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-                WriteIndented = true
+                StatusCode = ex switch
+                {
+                    AppException appEx => appEx.StatusCode,
+                    KeyNotFoundException => StatusCodes.Status404NotFound,
+                    UnauthorizedAccessException => StatusCodes.Status401Unauthorized,
+                    _ => StatusCodes.Status500InternalServerError
+                },
+                ErrorType = ex switch
+                {
+                    AppException appEx => appEx.ErrorType,
+                    KeyNotFoundException => "Not Found",
+                    UnauthorizedAccessException => "Unauthorized",
+                    _ => "Internal Server Error"
+                },
+                Message = ex.Message,
+                Timestamp = DateTime.UtcNow
             };
 
-            await context.Response.WriteAsync(JsonSerializer.Serialize(response, jsonOptions));
+            await context.Response.WriteAsync(
+                JsonSerializer.Serialize(response, new JsonSerializerOptions
+                {
+                    PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+                }));
         }
     }
 }

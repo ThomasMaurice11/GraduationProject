@@ -516,6 +516,9 @@
                   "Description": {
                     "type": "string"
                   },
+                  "Title": {
+                    "type": "string"
+                  },
                   "Age": {
                     "type": "integer",
                     "format": "int32"
@@ -537,6 +540,9 @@
               },
               "encoding": {
                 "Description": {
+                  "style": "form"
+                },
+                "Title": {
                   "style": "form"
                 },
                 "Age": {
@@ -767,6 +773,68 @@
         "tags": [
           "Auth"
         ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Auth/forgot-password": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ForgotPasswordDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ForgotPasswordDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ForgotPasswordDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Auth/reset-password": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResetPasswordDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResetPasswordDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResetPasswordDto"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "Success"
@@ -1154,6 +1222,9 @@
                     "type": "integer",
                     "format": "int32"
                   },
+                  "Title": {
+                    "type": "string"
+                  },
                   "Breed": {
                     "type": "string"
                   },
@@ -1177,6 +1248,9 @@
                   "style": "form"
                 },
                 "Age": {
+                  "style": "form"
+                },
+                "Title": {
                   "style": "form"
                 },
                 "Breed": {
@@ -1255,6 +1329,9 @@
                   "Breed": {
                     "type": "string"
                   },
+                  "Title": {
+                    "type": "string"
+                  },
                   "Gender": {
                     "type": "string"
                   },
@@ -1278,6 +1355,9 @@
                   "style": "form"
                 },
                 "Breed": {
+                  "style": "form"
+                },
+                "Title": {
                   "style": "form"
                 },
                 "Gender": {
@@ -1661,6 +1741,10 @@
             "type": "string",
             "nullable": true
           },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
           "photoUrls": {
             "type": "array",
             "items": {
@@ -1819,6 +1903,20 @@
         },
         "additionalProperties": false
       },
+      "ForgotPasswordDto": {
+        "required": [
+          "email"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "minLength": 1,
+            "type": "string",
+            "format": "email"
+          }
+        },
+        "additionalProperties": false
+      },
       "GetClinicDto": {
         "type": "object",
         "properties": {
@@ -1917,6 +2015,10 @@
             "type": "integer",
             "format": "int32"
           },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
           "breed": {
             "type": "string",
             "nullable": true
@@ -1960,10 +2062,6 @@
           "password": {
             "type": "string",
             "nullable": true
-          },
-          "role": {
-            "type": "string",
-            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1982,6 +2080,35 @@
           "hoursAnimalAlone": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ResetPasswordDto": {
+        "required": [
+          "confirmPassword",
+          "email",
+          "newPassword",
+          "token"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "token": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "newPassword": {
+            "maxLength": 100,
+            "minLength": 6,
+            "type": "string"
+          },
+          "confirmPassword": {
+            "minLength": 1,
+            "type": "string"
           }
         },
         "additionalProperties": false

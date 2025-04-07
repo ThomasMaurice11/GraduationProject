@@ -5,6 +5,7 @@ public class AnimalCreateDto
 {
 
     public string Description { get; set; }
+    public string Title { get; set; } // Add this line
 
     public int Age { get; set; }
 

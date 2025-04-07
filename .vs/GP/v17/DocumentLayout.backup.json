@@ -3,40 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\thoma\\source\\repos\\GP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\appsettings.docker.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\appsettings.docker.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\controllers\\petcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\controllers\\petcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\controllers\\animalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\controllers\\animalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\gp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\gp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\controllers\\adoptionrequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\controllers\\adoptionrequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\middleware\\globalexceptionhandlermiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\middleware\\globalexceptionhandlermiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\exceptions\\appexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\exceptions\\appexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\middleware\\globalexceptionhandlermiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\middleware\\globalexceptionhandlermiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\controllers\\adoptionrequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\controllers\\adoptionrequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\models\\errorresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -47,44 +35,16 @@
       "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\dtos\\adoption\\adoptionrequestwithdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\dtos\\adoption\\adoptionrequestwithdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\dtos\\adoption\\adoptionrequestresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\dtos\\adoption\\adoptionrequestresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\dtos\\auth\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\dtos\\auth\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\models\\adoptionrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\models\\adoptionrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\dtos\\adoption\\adoptionrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\dtos\\adoption\\adoptionrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\dtos\\adoption\\requestdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\dtos\\adoption\\requestdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\models\\animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\models\\animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\dtos\\ownerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\dtos\\ownerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\dtos\\animal\\animalresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\dtos\\animal\\animalresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\dtos\\animal\\animalcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\dtos\\animal\\animalcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\dtos\\auth\\doctorregistermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\dtos\\auth\\doctorregistermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -94,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -106,275 +66,145 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "docker-compose.yml",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\docker-compose.yml",
-              "RelativeDocumentMoniker": "GP\\docker-compose.yml",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\docker-compose.yml",
-              "RelativeToolTip": "GP\\docker-compose.yml",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAQwDoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2025-04-02T14:12:14.947Z",
+              "DocumentIndex": 0,
+              "Title": "PetController.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\PetController.cs",
+              "RelativeDocumentMoniker": "GP\\Controllers\\PetController.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\PetController.cs",
+              "RelativeToolTip": "GP\\Controllers\\PetController.cs",
+              "ViewState": "AgIAAAYBAAAAAAAAAAAAAP4AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T13:03:37.946Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\appsettings.json",
-              "RelativeDocumentMoniker": "GP\\appsettings.json",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\appsettings.json",
-              "RelativeToolTip": "GP\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-02T14:10:13.836Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "GP\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\appsettings.Development.json",
-              "RelativeToolTip": "GP\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-02T14:10:15.768Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.Docker.json",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\appsettings.Docker.json",
-              "RelativeDocumentMoniker": "GP\\appsettings.Docker.json",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\appsettings.Docker.json",
-              "RelativeToolTip": "GP\\appsettings.Docker.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-02T14:10:10.065Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Program.cs",
               "RelativeDocumentMoniker": "GP\\Program.cs",
               "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Program.cs",
               "RelativeToolTip": "GP\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAMYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T13:15:44.258Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "GlobalExceptionHandlerMiddleware.cs",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Middleware\\GlobalExceptionHandlerMiddleware.cs",
-              "RelativeDocumentMoniker": "GP\\Middleware\\GlobalExceptionHandlerMiddleware.cs",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Middleware\\GlobalExceptionHandlerMiddleware.cs",
-              "RelativeToolTip": "GP\\Middleware\\GlobalExceptionHandlerMiddleware.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFAAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T13:15:20.017Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ErrorResponse.cs",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Models\\ErrorResponse.cs",
-              "RelativeDocumentMoniker": "GP\\Models\\ErrorResponse.cs",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Models\\ErrorResponse.cs",
-              "RelativeToolTip": "GP\\Models\\ErrorResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T13:14:28.551Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AppException.cs",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Exceptions\\AppException.cs",
-              "RelativeDocumentMoniker": "GP\\Exceptions\\AppException.cs",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Exceptions\\AppException.cs",
-              "RelativeToolTip": "GP\\Exceptions\\AppException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T13:13:49.959Z",
+              "WhenOpened": "2025-04-07T12:59:45.931Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "GP",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\GP.csproj",
-              "RelativeDocumentMoniker": "GP\\GP.csproj",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\GP.csproj",
-              "RelativeToolTip": "GP\\GP.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-02T13:13:01.438Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "GP\\Controllers\\AdminController.cs",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "GP\\Controllers\\AdminController.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAAwCcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T12:41:29.911Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "AdoptionRequestDto.cs",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Adoption\\AdoptionRequestDto.cs",
-              "RelativeDocumentMoniker": "GP\\DTOs\\Adoption\\AdoptionRequestDto.cs",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Adoption\\AdoptionRequestDto.cs",
-              "RelativeToolTip": "GP\\DTOs\\Adoption\\AdoptionRequestDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T12:01:38.658Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "AdoptionRequestResponse.cs",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Adoption\\AdoptionRequestResponse.cs",
-              "RelativeDocumentMoniker": "GP\\DTOs\\Adoption\\AdoptionRequestResponse.cs",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Adoption\\AdoptionRequestResponse.cs",
-              "RelativeToolTip": "GP\\DTOs\\Adoption\\AdoptionRequestResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T11:56:28.028Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "AdoptionRequestController.cs",
               "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\AdoptionRequestController.cs",
               "RelativeDocumentMoniker": "GP\\Controllers\\AdoptionRequestController.cs",
               "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\AdoptionRequestController.cs",
               "RelativeToolTip": "GP\\Controllers\\AdoptionRequestController.cs",
-              "ViewState": "AgIAAEsBAAAAAAAAAAAAAC0BAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAANgAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T09:55:13.073Z",
+              "WhenOpened": "2025-04-07T12:57:32.941Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "AdoptionRequest.cs",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Models\\AdoptionRequest.cs",
-              "RelativeDocumentMoniker": "GP\\Models\\AdoptionRequest.cs",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Models\\AdoptionRequest.cs",
-              "RelativeToolTip": "GP\\Models\\AdoptionRequest.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBsAAAADAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "AnimalController.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\AnimalController.cs",
+              "RelativeDocumentMoniker": "GP\\Controllers\\AnimalController.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\AnimalController.cs",
+              "RelativeToolTip": "GP\\Controllers\\AnimalController.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAuwF0AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T12:05:54.147Z",
+              "WhenOpened": "2025-04-07T12:41:53.212Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AdoptionRequestWithDetailsDto.cs",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Adoption\\AdoptionRequestWithDetailsDto.cs",
-              "RelativeDocumentMoniker": "GP\\DTOs\\Adoption\\AdoptionRequestWithDetailsDto.cs",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Adoption\\AdoptionRequestWithDetailsDto.cs",
-              "RelativeToolTip": "GP\\DTOs\\Adoption\\AdoptionRequestWithDetailsDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "AppException.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Exceptions\\AppException.cs",
+              "RelativeDocumentMoniker": "GP\\Exceptions\\AppException.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Exceptions\\AppException.cs",
+              "RelativeToolTip": "GP\\Exceptions\\AppException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T11:52:43.536Z",
+              "WhenOpened": "2025-04-07T12:40:57.35Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "UserDto.cs",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\UserDto.cs",
-              "RelativeDocumentMoniker": "GP\\DTOs\\UserDto.cs",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\UserDto.cs",
-              "RelativeToolTip": "GP\\DTOs\\UserDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "ErrorResponse.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Models\\ErrorResponse.cs",
+              "RelativeDocumentMoniker": "GP\\Models\\ErrorResponse.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Models\\ErrorResponse.cs",
+              "RelativeToolTip": "GP\\Models\\ErrorResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T11:43:03.627Z",
+              "WhenOpened": "2025-04-07T12:40:16.651Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "AnimalResponseDto.cs",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Animal\\AnimalResponseDto.cs",
-              "RelativeDocumentMoniker": "GP\\DTOs\\Animal\\AnimalResponseDto.cs",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Animal\\AnimalResponseDto.cs",
-              "RelativeToolTip": "GP\\DTOs\\Animal\\AnimalResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAeAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "GlobalExceptionHandlerMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Middleware\\GlobalExceptionHandlerMiddleware.cs",
+              "RelativeDocumentMoniker": "GP\\Middleware\\GlobalExceptionHandlerMiddleware.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Middleware\\GlobalExceptionHandlerMiddleware.cs",
+              "RelativeToolTip": "GP\\Middleware\\GlobalExceptionHandlerMiddleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T11:32:53.816Z",
+              "WhenOpened": "2025-04-07T12:40:03.686Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "AnimalCreateDto.cs",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Animal\\AnimalCreateDto.cs",
-              "RelativeDocumentMoniker": "GP\\DTOs\\Animal\\AnimalCreateDto.cs",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Animal\\AnimalCreateDto.cs",
-              "RelativeToolTip": "GP\\DTOs\\Animal\\AnimalCreateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "GP\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "GP\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T10:10:07.454Z",
+              "WhenOpened": "2025-04-07T12:14:00.054Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "OwnerDto.cs",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\OwnerDto.cs",
-              "RelativeDocumentMoniker": "GP\\DTOs\\OwnerDto.cs",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\OwnerDto.cs",
-              "RelativeToolTip": "GP\\DTOs\\OwnerDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "RegisterModel.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Auth\\RegisterModel.cs",
+              "RelativeDocumentMoniker": "GP\\DTOs\\Auth\\RegisterModel.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Auth\\RegisterModel.cs",
+              "RelativeToolTip": "GP\\DTOs\\Auth\\RegisterModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T11:43:05.715Z",
+              "WhenOpened": "2025-04-07T12:12:18.994Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "RequestDetailsDto.cs",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Adoption\\RequestDetailsDto.cs",
-              "RelativeDocumentMoniker": "GP\\DTOs\\Adoption\\RequestDetailsDto.cs",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Adoption\\RequestDetailsDto.cs",
-              "RelativeToolTip": "GP\\DTOs\\Adoption\\RequestDetailsDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "DoctorRegisterModel.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Auth\\DoctorRegisterModel.cs",
+              "RelativeDocumentMoniker": "GP\\DTOs\\Auth\\DoctorRegisterModel.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Auth\\DoctorRegisterModel.cs",
+              "RelativeToolTip": "GP\\DTOs\\Auth\\DoctorRegisterModel.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T11:53:22.441Z",
+              "WhenOpened": "2025-04-07T12:10:16.325Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Animal.cs",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Models\\Animal.cs",
-              "RelativeDocumentMoniker": "GP\\Models\\Animal.cs",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Models\\Animal.cs",
-              "RelativeToolTip": "GP\\Models\\Animal.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "GP\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "GP\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAuwNEAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T11:44:19.137Z",
+              "WhenOpened": "2025-04-06T21:21:41.784Z",
               "EditorCaption": ""
             }
           ]

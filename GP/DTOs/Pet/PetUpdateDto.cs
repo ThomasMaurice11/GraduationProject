@@ -12,8 +12,8 @@ namespace GP.DTOs.Pet
 
    
         public string Breed { get; set; }
+        public string Title { get; set; }  
 
-        
         public string Gender { get; set; }
 
      

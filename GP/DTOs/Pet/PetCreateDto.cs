@@ -10,8 +10,9 @@ namespace GP.DTOs.Pet
 
        
         public int Age { get; set; }
+        public string Title { get; set; }  
 
- 
+
         public string? Breed { get; set; }
 
        

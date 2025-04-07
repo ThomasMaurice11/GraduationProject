@@ -8,8 +8,10 @@
         {
             [Key]
             public int PetId { get; set; }
+        [Required]
+        public string Title { get; set; }  
 
-            [Required]
+        [Required]
             public string Name { get; set; }
 
             [Required]

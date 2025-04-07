@@ -1,8 +1,8 @@
-﻿using Azure.Core;
-using GP.Models;
-using GP;
+﻿using GP.Models;
+using GP.Exceptions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using GP;
 
 [Route("api/[controller]")]
 [ApiController]
@@ -21,139 +21,103 @@ public class AnimalsController : ControllerBase
     public async Task<IActionResult> CreateAnimal([FromForm] AnimalCreateDto animalDto)
     {
         if (animalDto.Photos == null || animalDto.Photos.Count == 0)
-            return BadRequest("No files uploaded.");
+            throw new AppException("No photos uploaded.", 400, "Bad Request");
 
-        var animal = new Animal
+        try
         {
-            Description = animalDto.Description,
-            Age = animalDto.Age,
-            Gender = animalDto.Gender,
-            HealthIssues = animalDto.HealthIssues,
-        };
-
-        // First save the animal to get an ID
-        _context.Animals.Add(animal);
-        await _context.SaveChangesAsync(); // This generates the AnimalId
-
-        foreach (var photo in animalDto.Photos)
-        {
-            using var memoryStream = new MemoryStream();
-            await photo.CopyToAsync(memoryStream);
-            var photoBytes = memoryStream.ToArray();
-
-            var fileName = Guid.NewGuid() + Path.GetExtension(photo.FileName);
-            var filePath = Path.Combine(_env.WebRootPath, "images", fileName);
-            await System.IO.File.WriteAllBytesAsync(filePath, photoBytes);
-
-            animal.Photos.Add(new Photo
+            var animal = new Animal
             {
-                ImageData = photoBytes,
-                ImageUrl = $"{Request.Scheme}://{Request.Host}/images/{fileName}",
-                AnimalId = animal.AnimalId, // Set AnimalId
-                PetId = null // Explicitly set PetId to null
-            });
-        }
+                Title = animalDto.Title,
+                Description = animalDto.Description,
+                Age = animalDto.Age,
+                Gender = animalDto.Gender,
+                HealthIssues = animalDto.HealthIssues,
+            };
 
-        await _context.SaveChangesAsync();
-        return Ok(MapToAnimalResponseDto(animal));
+            _context.Animals.Add(animal);
+            await _context.SaveChangesAsync();
+
+            foreach (var photo in animalDto.Photos)
+            {
+                using var memoryStream = new MemoryStream();
+                await photo.CopyToAsync(memoryStream);
+                var photoBytes = memoryStream.ToArray();
+
+                var fileName = Guid.NewGuid() + Path.GetExtension(photo.FileName);
+                var filePath = Path.Combine(_env.WebRootPath, "images", fileName);
+                await System.IO.File.WriteAllBytesAsync(filePath, photoBytes);
+
+                animal.Photos.Add(new Photo
+                {
+                    ImageData = photoBytes,
+                    ImageUrl = $"{Request.Scheme}://{Request.Host}/images/{fileName}",
+                    AnimalId = animal.AnimalId,
+                    PetId = null
+                });
+            }
+
+            await _context.SaveChangesAsync();
+            return Ok(MapToAnimalResponseDto(animal));
+        }
+        catch (Exception ex)
+        {
+            throw new AppException($"Failed to create animal: {ex.Message}", 500);
+        }
     }
 
-    // GET: api/Animals
     [HttpGet]
     public async Task<IActionResult> GetAllAnimals()
     {
-        var animals = await _context.Animals
-            .Include(a => a.Photos) // Include photos
-            .Select(a => MapToAnimalResponseDto(a))
-            .ToListAsync();
+        try
+        {
+            var animals = await _context.Animals
+                .Include(a => a.Photos)
+                .ToListAsync();
 
-        return Ok(animals);
+            var result = animals.Select(a => MapToAnimalResponseDto(a));
+            return Ok(result);
+        }
+        catch (Exception ex)
+        {
+            throw new AppException($"Error fetching animals: {ex.Message}", 500);
+        }
     }
 
-    // GET: api/Animals/5
     [HttpGet("{id}")]
     public async Task<IActionResult> GetAnimal(int id)
     {
         var animal = await _context.Animals
-            .Include(a => a.Photos) // Include photos
+            .Include(a => a.Photos)
             .FirstOrDefaultAsync(a => a.AnimalId == id);
 
         if (animal == null)
-        {
-            return NotFound();
-        }
+            throw new AppException($"Animal with ID {id} not found.", 404, "Not Found");
 
         return Ok(MapToAnimalResponseDto(animal));
     }
 
-    //// PUT: api/Animals/5
-    //[HttpPut("{id}")]
-    //public async Task<IActionResult> UpdateAnimal(int id, [FromForm] AnimalUpdateDto animalDto)
-    //{
-    //    var animal = await _context.Animals
-    //        .Include(a => a.Photos) // Include photos
-    //        .FirstOrDefaultAsync(a => a.AnimalId == id);
-
-    //    if (animal == null)
-    //    {
-    //        return NotFound();
-    //    }
-
-    //    animal.Description = animalDto.Description;
-    //    animal.Age = animalDto.Age;
-    //    animal.Gender = animalDto.Gender;
-    //    animal.HealthIssues = animalDto.HealthIssues;
-
-    //    // Update photos if new photos are provided
-    //    if (animalDto.Photos != null && animalDto.Photos.Count > 0)
-    //    {
-    //        // Remove existing photos
-    //        _context.Photos.RemoveRange(animal.Photos);
-
-    //        foreach (var photo in animalDto.Photos)
-    //        {
-    //            using var memoryStream = new MemoryStream();
-    //            await photo.CopyToAsync(memoryStream);
-    //            var photoBytes = memoryStream.ToArray();
-
-    //            var fileName = Guid.NewGuid().ToString() + Path.GetExtension(photo.FileName);
-    //            var filePath = Path.Combine(_env.WebRootPath, "images", fileName);
-    //            await System.IO.File.WriteAllBytesAsync(filePath, photoBytes);
-
-    //            animal.Photos.Add(new Photo
-    //            {
-    //                ImageData = photoBytes,
-    //                ImageUrl = $"{Request.Scheme}://{Request.Host}/images/{fileName}",
-    //                AnimalId = animal.AnimalId // Associate the photo with the animal
-    //            });
-    //        }
-    //    }
-
-    //    _context.Animals.Update(animal);
-    //    await _context.SaveChangesAsync();
-
-    //    return Ok(MapToAnimalResponseDto(animal));
-    //}
-
-    // DELETE: api/Animals/5
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteAnimal(int id)
     {
         var animal = await _context.Animals
-            .Include(a => a.Photos) // Include photos
+            .Include(a => a.Photos)
             .FirstOrDefaultAsync(a => a.AnimalId == id);
 
         if (animal == null)
+            throw new AppException($"Animal with ID {id} not found.", 404, "Not Found");
+
+        try
         {
-            return NotFound();
+            _context.Photos.RemoveRange(animal.Photos);
+            _context.Animals.Remove(animal);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
         }
-
-        // Delete associated photos
-        _context.Photos.RemoveRange(animal.Photos);
-        _context.Animals.Remove(animal);
-        await _context.SaveChangesAsync();
-
-        return NoContent();
+        catch (Exception ex)
+        {
+            throw new AppException($"Error deleting animal: {ex.Message}", 500);
+        }
     }
 
     private AnimalResponseDto MapToAnimalResponseDto(Animal animal)
@@ -161,11 +125,12 @@ public class AnimalsController : ControllerBase
         return new AnimalResponseDto
         {
             AnimalId = animal.AnimalId,
+            Title = animal.Title,
             Description = animal.Description,
             Age = animal.Age,
             Gender = animal.Gender,
             HealthIssues = animal.HealthIssues,
-            PhotoUrls = animal.Photos.Select(p => p.ImageUrl).ToList() // Include photo URLs
+            PhotoUrls = animal.Photos.Select(p => p.ImageUrl).ToList()
         };
     }
 }

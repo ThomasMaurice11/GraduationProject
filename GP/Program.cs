@@ -75,6 +75,7 @@ builder.Services.AddAuthentication(options =>
 
 
 builder.Services.AddScoped<JwtTokenService>();
+builder.Services.AddTransient<IEmailService, EmailService>();
 //builder.Services.AddScoped<AnimalRepository>();
 //builder.Services.AddScoped<AnimalService>();
 

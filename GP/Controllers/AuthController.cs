@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 using GP.Models;
 using GP.Services;
 using GP.DTOs.Auth;
+using Microsoft.AspNetCore.WebUtilities;
+using System.Text;
 
 
 [Route("api/[controller]")]
@@ -13,11 +15,13 @@ public class AuthController : ControllerBase
 {
     private readonly UserManager<ApplicationUser> _userManager;
     private readonly JwtTokenService _jwtTokenService;
+    private readonly IEmailService _emailService;
 
-    public AuthController(UserManager<ApplicationUser> userManager, JwtTokenService jwtTokenService)
+    public AuthController(UserManager<ApplicationUser> userManager, JwtTokenService jwtTokenService, IEmailService emailService)
     {
         _userManager = userManager;
         _jwtTokenService = jwtTokenService;
+        _emailService = emailService;
     }
 
     [HttpPost("RegisterUser")]
@@ -184,6 +188,61 @@ public class AuthController : ControllerBase
             user.Email,
             Roles = roles
         });
+    }
+
+
+
+    [HttpPost("forgot-password")]
+    public async Task<IActionResult> ForgotPassword([FromBody] ForgotPasswordDto model)
+    {
+        if (!ModelState.IsValid)
+            return BadRequest("Invalid email address");
+
+        var user = await _userManager.FindByEmailAsync(model.Email);
+        if (user == null)
+            return Ok("If your email is registered, you will receive a password reset link."); // Don't reveal whether user exists
+
+        var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+
+        // In a real application, you should encode the token for URL safety
+        var encodedToken = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(token));
+
+        var resetLink = $"http://localhost:3000/reset-password?email={model.Email}&token={encodedToken}";
+
+        var emailBody = $"Please reset your password by clicking here: <a href='{resetLink}'>link</a>";
+
+        try
+        {
+            await _emailService.SendEmailAsync(model.Email, "Reset Your Password", emailBody);
+            return Ok("Password reset link has been sent to your email.");
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, $"Failed to send email: {ex.Message}");
+        }
+    }
+
+    [HttpPost("reset-password")]
+    public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordDto model)
+    {
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState);
+
+        var user = await _userManager.FindByEmailAsync(model.Email);
+        if (user == null)
+            return BadRequest("Invalid email address");
+
+        var decodedToken = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(model.Token));
+
+        var result = await _userManager.ResetPasswordAsync(user, decodedToken, model.NewPassword);
+
+        if (result.Succeeded)
+        {
+            // Optionally, you might want to send a confirmation email here
+            return Ok("Password has been reset successfully.");
+        }
+
+        return BadRequest(result.Errors);
     }
 
 

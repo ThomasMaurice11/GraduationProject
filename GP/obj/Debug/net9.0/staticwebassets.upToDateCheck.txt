@@ -1,4 +1,6 @@
 wwwroot\images\04987ed1-4652-410e-b3b4-545b8af0919e.png
+wwwroot\images\0e4593ce-0ce5-4f89-8f2a-a3040fdc22a4.webp
+wwwroot\images\1820b168-9d3e-404c-9f67-5fcf1bd3b8d9.webp
 wwwroot\images\1872299f-5212-4eea-b7a8-6c1b3883d2c7.jpg
 wwwroot\images\36092c1e-ac2b-4ceb-820e-1ac4c8ef14ef.jpg
 wwwroot\images\409916d7-6ea3-49f9-a9c3-6e57f10177bd.jpg
@@ -14,7 +16,9 @@ wwwroot\images\9526038b-56b7-44da-9e8d-4aa4a301b89e.jpg
 wwwroot\images\96e168c7-3600-4686-8178-e82a4fe10c2a.jpg
 wwwroot\images\98b546e3-4643-416e-a147-172927f19eb9.jpg
 wwwroot\images\a3e60bff-a092-497a-af45-016a951e9dfc.jpg
+wwwroot\images\bcebb4ba-b1d4-471f-94c7-d690211e6a89.webp
 wwwroot\images\c4d2a7ba-c8d7-4b2a-bb0f-741d644ffb54.jpg
+wwwroot\images\caa260b0-b912-4897-a4f6-775a03bdda31.webp
 wwwroot\images\cbed5ccc-57f0-4a47-ada9-8d05b8399706.jpg
 wwwroot\images\cc46ae75-4036-4d0a-8c49-6b5d6439e360.jpg
 wwwroot\images\d38054a2-4e9b-4882-b5b0-e9a2f1d61907.jpg

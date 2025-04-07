@@ -6,6 +6,7 @@ public class AnimalResponseDto
 {
     public int AnimalId { get; set; }
     public string Description { get; set; }
+    public string Title { get; set; } 
 
     public List<string> PhotoUrls { get; set; }
     public int Age { get; set; }

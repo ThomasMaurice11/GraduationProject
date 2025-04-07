@@ -3,11 +3,12 @@ using GP.DTOs.Pet;
 using GP.DTOs;
 using GP.Models;
 using GP.Services;
+using GP.Exceptions;
 using GP;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using DocumentFormat.OpenXml.Office.Word;
+using System.Net;
 
 [Route("api/[controller]")]
 [ApiController]
@@ -17,181 +18,231 @@ public class PetController : ControllerBase
     private readonly AuthDbContext _context;
     private readonly IWebHostEnvironment _env;
     private readonly JwtTokenService _jwtTokenService;
+    private readonly ILogger<PetController> _logger;
 
-    public PetController(AuthDbContext context, IWebHostEnvironment env, JwtTokenService jwtTokenService)
+    public PetController(
+        AuthDbContext context,
+        IWebHostEnvironment env,
+        JwtTokenService jwtTokenService,
+        ILogger<PetController> logger)
     {
         _context = context;
         _env = env;
         _jwtTokenService = jwtTokenService;
+        _logger = logger;
     }
+
     [HttpPost]
     public async Task<IActionResult> CreatePet([FromForm] PetCreateDto petDto)
     {
-        var token = HttpContext.Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
-        var userId = _jwtTokenService.GetUserIdFromToken(token);
-        if (userId == null)
+        try
         {
-            return Unauthorized("User ID not found in token.");
-        }
+            var token = HttpContext.Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
+            var userId = _jwtTokenService.GetUserIdFromToken(token);
 
-        if (petDto.Photos == null || petDto.Photos.Count == 0)
-            return BadRequest("No files uploaded.");
-
-        // 1. First create and save the pet to get its ID
-        var pet = new Pet
-        {
-            Name = petDto.Name,
-            Age = petDto.Age,
-            Breed = petDto.Breed,
-            Gender = petDto.Gender,
-            HealthStatus = petDto.HealthStatus,
-            UserId = userId,
-        };
-
-        _context.Pets.Add(pet);
-        await _context.SaveChangesAsync(); // This generates the PetId
-
-        // 2. Now add photos with the correct PetId
-        foreach (var photo in petDto.Photos)
-        {
-            using var memoryStream = new MemoryStream();
-            await photo.CopyToAsync(memoryStream);
-            var photoBytes = memoryStream.ToArray();
-
-            var fileName = Guid.NewGuid().ToString() + Path.GetExtension(photo.FileName);
-            var filePath = Path.Combine(_env.WebRootPath, "images", fileName);
-            await System.IO.File.WriteAllBytesAsync(filePath, photoBytes);
-
-            pet.Photos.Add(new Photo
+            if (userId == null)
             {
-                ImageData = photoBytes,
-                ImageUrl = $"{Request.Scheme}://{Request.Host}/images/{fileName}",
-                PetId = pet.PetId // Now this has a valid value
-            });
+                throw new AppException("User ID not found in token", StatusCodes.Status401Unauthorized, "Unauthorized");
+            }
+
+            if (petDto.Photos == null || petDto.Photos.Count == 0)
+            {
+                throw new AppException("At least one photo is required", StatusCodes.Status400BadRequest, "Validation Error");
+            }
+
+            var pet = new Pet
+            {
+                Title = petDto.Title,
+                Name = petDto.Name,
+                Age = petDto.Age,
+                Breed = petDto.Breed,
+                Gender = petDto.Gender,
+                HealthStatus = petDto.HealthStatus,
+                UserId = userId,
+            };
+
+            _context.Pets.Add(pet);
+            await _context.SaveChangesAsync();
+
+            foreach (var photo in petDto.Photos)
+            {
+                try
+                {
+                    using var memoryStream = new MemoryStream();
+                    await photo.CopyToAsync(memoryStream);
+                    var photoBytes = memoryStream.ToArray();
+
+                    var fileName = Guid.NewGuid().ToString() + Path.GetExtension(photo.FileName);
+                    var filePath = Path.Combine(_env.WebRootPath, "images", fileName);
+                    await System.IO.File.WriteAllBytesAsync(filePath, photoBytes);
+
+                    pet.Photos.Add(new Photo
+                    {
+                        ImageData = photoBytes,
+                        ImageUrl = $"{Request.Scheme}://{Request.Host}/images/{fileName}",
+                        PetId = pet.PetId
+                    });
+                }
+                catch (IOException ioEx)
+                {
+                    _logger.LogError(ioEx, "Error saving photo for pet {PetId}", pet.PetId);
+                    throw new AppException("Error saving photo", StatusCodes.Status500InternalServerError, "File System Error");
+                }
+            }
+
+            await _context.SaveChangesAsync();
+            return Ok(MapToPetResponseDto(pet));
         }
-
-        // 3. Save the photos
-        await _context.SaveChangesAsync();
-
-        return Ok(MapToPetResponseDto(pet));
+        catch (DbUpdateException dbEx)
+        {
+            _logger.LogError(dbEx, "Database error while creating pet");
+            throw new AppException("Database error while saving pet", StatusCodes.Status500InternalServerError, "Database Error");
+        }
     }
 
-    // GET: api/Pet/5
     [HttpGet("{id}")]
     public async Task<IActionResult> GetPet(int id)
     {
         var pet = await _context.Pets
             .Include(p => p.Owner)
-            .Include(p => p.Photos) // Include photos
+            .Include(p => p.Photos)
             .FirstOrDefaultAsync(p => p.PetId == id);
 
         if (pet == null)
         {
-            return NotFound();
+            throw new AppException($"Pet with ID {id} not found", StatusCodes.Status404NotFound, "Not Found");
         }
 
         return Ok(MapToPetResponseDto(pet));
     }
 
-    // GET: api/Pet/GetAllPets
     [HttpGet("GetAllPets")]
     public async Task<IActionResult> GetAllPets()
     {
-        var pets = await _context.Pets
-            .Include(p => p.Owner)
-            .Include(p => p.Photos) // Include photos
-            .ToListAsync();
+        try
+        {
+            var pets = await _context.Pets
+                .Include(p => p.Owner)
+                .Include(p => p.Photos)
+                .ToListAsync();
 
-        return Ok(pets.Select(MapToPetResponseDto));
+            return Ok(pets.Select(MapToPetResponseDto));
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error retrieving all pets");
+            throw new AppException("Error retrieving pets", StatusCodes.Status500InternalServerError, "Database Error");
+        }
     }
 
-    // GET: api/Pet/GetMyPets
     [HttpGet("GetMyPets")]
     public async Task<IActionResult> GetMyPets()
     {
         var token = HttpContext.Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
         var userId = _jwtTokenService.GetUserIdFromToken(token);
 
+        if (userId == null)
+        {
+            throw new AppException("User ID not found in token", StatusCodes.Status401Unauthorized, "Unauthorized");
+        }
+
         var pets = await _context.Pets
             .Include(p => p.Owner)
-            .Include(p => p.Photos) // Include photos
+            .Include(p => p.Photos)
             .Where(p => p.UserId == userId)
             .ToListAsync();
 
         return Ok(pets.Select(MapToPetResponseDto));
     }
 
-    // PUT: api/Pet/5
     [HttpPut("{id}")]
     public async Task<IActionResult> UpdatePet(int id, [FromForm] PetUpdateDto petDto)
     {
-        var pet = await _context.Pets
-            .Include(p => p.Owner)
-            .Include(p => p.Photos) // Include photos
-            .FirstOrDefaultAsync(p => p.PetId == id);
-
-        if (pet == null)
+        try
         {
-            return NotFound();
-        }
+            var pet = await _context.Pets
+                .Include(p => p.Owner)
+                .Include(p => p.Photos)
+                .FirstOrDefaultAsync(p => p.PetId == id);
 
-        pet.Name = petDto.Name;
-        pet.Age = petDto.Age;
-        pet.Breed = petDto.Breed;
-        pet.Gender = petDto.Gender;
-        pet.HealthStatus = petDto.HealthStatus;
-
-        // Update photos if new photos are provided
-        if (petDto.Photos != null && petDto.Photos.Count > 0)
-        {
-            // Remove existing photos
-            _context.Photos.RemoveRange(pet.Photos);
-
-            foreach (var photo in petDto.Photos)
+            if (pet == null)
             {
-                using var memoryStream = new MemoryStream();
-                await photo.CopyToAsync(memoryStream);
-                var photoBytes = memoryStream.ToArray();
-
-                var fileName = Guid.NewGuid().ToString() + Path.GetExtension(photo.FileName);
-                var filePath = Path.Combine(_env.WebRootPath, "images", fileName);
-                await System.IO.File.WriteAllBytesAsync(filePath, photoBytes);
-
-                pet.Photos.Add(new Photo
-                {
-                    ImageData = photoBytes,
-                    ImageUrl = $"{Request.Scheme}://{Request.Host}/images/{fileName}",
-                    PetId = pet.PetId // Associate the photo with the pet
-                });
-               
+                throw new AppException($"Pet with ID {id} not found", StatusCodes.Status404NotFound, "Not Found");
             }
+
+            pet.Title = petDto.Title;
+            pet.Name = petDto.Name;
+            pet.Age = petDto.Age;
+            pet.Breed = petDto.Breed;
+            pet.Gender = petDto.Gender;
+            pet.HealthStatus = petDto.HealthStatus;
+
+            if (petDto.Photos != null && petDto.Photos.Count > 0)
+            {
+                _context.Photos.RemoveRange(pet.Photos);
+
+                foreach (var photo in petDto.Photos)
+                {
+                    try
+                    {
+                        using var memoryStream = new MemoryStream();
+                        await photo.CopyToAsync(memoryStream);
+                        var photoBytes = memoryStream.ToArray();
+
+                        var fileName = Guid.NewGuid().ToString() + Path.GetExtension(photo.FileName);
+                        var filePath = Path.Combine(_env.WebRootPath, "images", fileName);
+                        await System.IO.File.WriteAllBytesAsync(filePath, photoBytes);
+
+                        pet.Photos.Add(new Photo
+                        {
+                            ImageData = photoBytes,
+                            ImageUrl = $"{Request.Scheme}://{Request.Host}/images/{fileName}",
+                            PetId = pet.PetId
+                        });
+                    }
+                    catch (IOException ioEx)
+                    {
+                        _logger.LogError(ioEx, "Error updating photo for pet {PetId}", pet.PetId);
+                        throw new AppException("Error updating photo", StatusCodes.Status500InternalServerError, "File System Error");
+                    }
+                }
+            }
+
+            await _context.SaveChangesAsync();
+            return Ok(MapToPetResponseDto(pet));
         }
-
-        _context.Pets.Update(pet);
-        await _context.SaveChangesAsync();
-
-        return Ok(MapToPetResponseDto(pet));
+        catch (DbUpdateException dbEx)
+        {
+            _logger.LogError(dbEx, "Database error while updating pet {PetId}", id);
+            throw new AppException("Database error while updating pet", StatusCodes.Status500InternalServerError, "Database Error");
+        }
     }
 
-    // DELETE: api/Pet/5
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeletePet(int id)
     {
-        var pet = await _context.Pets
-            .Include(p => p.Photos) // Include photos
-            .FirstOrDefaultAsync(p => p.PetId == id);
-
-        if (pet == null)
+        try
         {
-            return NotFound();
+            var pet = await _context.Pets
+                .Include(p => p.Photos)
+                .FirstOrDefaultAsync(p => p.PetId == id);
+
+            if (pet == null)
+            {
+                throw new AppException($"Pet with ID {id} not found", StatusCodes.Status404NotFound, "Not Found");
+            }
+
+            _context.Photos.RemoveRange(pet.Photos);
+            _context.Pets.Remove(pet);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
         }
-
-        // Delete associated photos
-        _context.Photos.RemoveRange(pet.Photos);
-        _context.Pets.Remove(pet);
-        await _context.SaveChangesAsync();
-
-        return NoContent();
+        catch (DbUpdateException dbEx)
+        {
+            _logger.LogError(dbEx, "Database error while deleting pet {PetId}", id);
+            throw new AppException("Database error while deleting pet", StatusCodes.Status500InternalServerError, "Database Error");
+        }
     }
 
     private PetResponseDto MapToPetResponseDto(Pet pet)
@@ -199,13 +250,14 @@ public class PetController : ControllerBase
         return new PetResponseDto
         {
             PetId = pet.PetId,
+            Title = pet.Title,
             Name = pet.Name,
             Age = pet.Age,
             Breed = pet.Breed,
             Gender = pet.Gender,
             HealthStatus = pet.HealthStatus,
             UserId = pet.UserId,
-            PhotoUrls = pet.Photos.Select(p => p.ImageUrl).ToList(), // Include photo URLs
+            PhotoUrls = pet.Photos.Select(p => p.ImageUrl).ToList(),
             Owner = pet.Owner != null ? new OwnerDto
             {
                 Id = pet.Owner.Id,

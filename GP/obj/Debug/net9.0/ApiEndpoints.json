@@ -307,6 +307,11 @@
         "IsRequired": false
       },
       {
+        "Name": "Title",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
         "Name": "Age",
         "Type": "System.Int32",
         "IsRequired": false
@@ -366,6 +371,22 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AuthController",
+    "Method": "ForgotPassword",
+    "RelativePath": "api/Auth/forgot-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "GP.DTOs.Auth.ForgotPasswordDto",
         "IsRequired": true
       }
     ],
@@ -456,6 +477,22 @@
       {
         "Name": "model",
         "Type": "GP.DTOs.Auth.RegisterModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AuthController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/Auth/reset-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "GP.DTOs.Auth.ResetPasswordDto",
         "IsRequired": true
       }
     ],
@@ -699,6 +736,11 @@
         "IsRequired": false
       },
       {
+        "Name": "Title",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
         "Name": "Breed",
         "Type": "System.String",
         "IsRequired": false
@@ -762,6 +804,11 @@
       },
       {
         "Name": "Breed",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Title",
         "Type": "System.String",
         "IsRequired": false
       },

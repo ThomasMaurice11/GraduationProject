@@ -1,64 +1,4 @@
-﻿//using DocumentFormat.OpenXml.InkML;
-//using GP.DTOs.Adoption;
-//using GP.Models;
-//using Microsoft.AspNetCore.Authorization;
-//using Microsoft.AspNetCore.Http;
-//using Microsoft.AspNetCore.Mvc;
-//using System;
-
-//namespace GP.Controllers
-//{
-//    [Route("api/[controller]")]
-//    [ApiController]
-//    [Authorize]
-//    public class AdoptionRequestController : ControllerBase
-//    {
-//        private readonly AuthDbContext _context;
-
-//        public AdoptionRequestController(AuthDbContext context)
-//        {
-//            _context = context;
-//        }
-
-
-//        [HttpPost]
-//        public async Task<ActionResult<AdoptionRequestDto>> MakeAdoptionRequest(AdoptionRequestDto createDto)
-//        {
-            
-//           var userId = User?.FindFirst("id")?.Value;
-//            var adoptionRequest = new AdoptionRequest
-//            {
-//                UserId = userId,
-//                PetId = createDto.PetId,
-//                AnimalId = createDto.AnimalId,
-//                Status = "Pending",
-//                RequestedAt = DateTime.UtcNow
-//            };
-
-//            _context.AdoptionRequests.Add(adoptionRequest);
-//            await _context.SaveChangesAsync();
-
-//            var resultDto = new AdoptionRequestDto
-//            {
-//                AdoptionRequestId = adoptionRequest.AdoptionRequestId,
-//                UserId = adoptionRequest.UserId,
-//                PetId = adoptionRequest.PetId,
-//                AnimalId = adoptionRequest.AnimalId,
-//                Status = adoptionRequest.Status,
-//                RequestedAt = adoptionRequest.RequestedAt
-//            };
-
-//            //return CreatedAtAction("GetAdoptionRequest", new { id = adoptionRequest.AdoptionRequestId }, resultDto);
-//            return (adoptionRequest);
-//        }
-//    }
-//}
-
-
-
-
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -85,6 +25,7 @@ namespace GP.Controllers
         {
             _context = context;
         }
+
         // GET: api/AdoptionRequests
         [HttpGet]
         public async Task<ActionResult<IEnumerable<AdoptionRequestResponse>>> GetAdoptionRequests()
@@ -126,9 +67,7 @@ namespace GP.Controllers
                 .FirstOrDefaultAsync(r => r.AdoptionRequestId == id);
 
             if (adoptionRequest == null)
-            {
-                throw new KeyNotFoundException($"Adoption request with ID {id} not found.");
-            }
+                throw new KeyNotFoundException($"Adoption request with ID {id} not found");
 
             return Ok(new AdoptionRequestResponse
             {
@@ -211,22 +150,18 @@ namespace GP.Controllers
             return Ok(requests);
         }
 
-
-        // POST: api/AdoptionRequests
         [HttpPost]
         public async Task<ActionResult<AdoptionRequestResponse>> CreateAdoptionRequest(AdoptionRequestDto createDto)
         {
             var userId = User?.FindFirst("id")?.Value
                 ?? throw new AppException("User not authenticated", 401);
 
-            // Validate request
             if (createDto.PetId.HasValue && createDto.AnimalId.HasValue)
                 throw new AppException("Cannot request both pet and animal simultaneously", 400);
 
             if (!createDto.PetId.HasValue && !createDto.AnimalId.HasValue)
                 throw new AppException("Either PetId or AnimalId must be provided", 400);
 
-            // Check if pet/animal exists
             if (createDto.PetId.HasValue && !await _context.Pets.AnyAsync(p => p.PetId == createDto.PetId))
                 throw new KeyNotFoundException($"Pet with ID {createDto.PetId} not found");
 
@@ -264,7 +199,6 @@ namespace GP.Controllers
                 });
         }
 
-        // GET: api/AdoptionRequests/byAnimals/{animalId}
         [HttpGet("byAnimals/{animalId}")]
         public async Task<ActionResult<IEnumerable<AdoptionRequestResponse>>> GetRequestsByAnimals(int animalId)
         {
@@ -294,7 +228,6 @@ namespace GP.Controllers
             return Ok(requests);
         }
 
-        // GET: api/AdoptionRequests/ByPet/{petId}
         [HttpGet("ByPet/{petId}")]
         public async Task<ActionResult<IEnumerable<AdoptionRequestResponse>>> GetRequestsByPet(int petId)
         {
@@ -325,10 +258,6 @@ namespace GP.Controllers
             return Ok(requests);
         }
 
-
-
-
-        // DELETE: api/AdoptionRequests/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAdoptionRequest(int id)
         {
@@ -461,6 +390,9 @@ namespace GP.Controllers
             var adoptionRequest = await _context.AdoptionRequests.FindAsync(requestId)
                 ?? throw new KeyNotFoundException($"Adoption request with ID {requestId} not found");
 
+            if (adoptionRequest.Status != "Pending")
+                throw new AppException("Only pending requests can be accepted", 400);
+
             adoptionRequest.Status = "Accepted";
             await _context.SaveChangesAsync();
 
@@ -473,15 +405,13 @@ namespace GP.Controllers
             var adoptionRequest = await _context.AdoptionRequests.FindAsync(requestId)
                 ?? throw new KeyNotFoundException($"Adoption request with ID {requestId} not found");
 
+            if (adoptionRequest.Status != "Pending")
+                throw new AppException("Only pending requests can be rejected", 400);
+
             adoptionRequest.Status = "Rejected";
             await _context.SaveChangesAsync();
 
             return NoContent();
-        }
-
-        private bool AdoptionRequestExists(int id)
-        {
-            return _context.AdoptionRequests.Any(e => e.AdoptionRequestId == id);
         }
     }
 }

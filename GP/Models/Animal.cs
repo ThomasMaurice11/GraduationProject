@@ -7,6 +7,7 @@ using System.Text.Json.Serialization;
 public class Animal
 {
     public int AnimalId { get; set; }
+    public string Title { get; set; } // Add this line
 
     [Required]
     public string Description { get; set; }

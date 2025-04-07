@@ -180,5 +180,5 @@ C:\Users\thoma\source\repos\GP\GP\bin\Debug\net9.0\GP.staticwebassets.runtime.js
 C:\Users\thoma\source\repos\GP\GP\bin\Debug\net9.0\Newtonsoft.Json.dll
 C:\Users\thoma\source\repos\GP\GP\bin\Debug\net9.0\System.Net.WebSockets.WebSocketProtocol.dll
 C:\Users\thoma\source\repos\GP\GP\obj\Debug\net9.0\GP.sourcelink.json
-C:\Users\thoma\source\repos\GP\GP\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\thoma\source\repos\GP\GP\bin\Debug\net9.0\appsettings.Docker.json
+C:\Users\thoma\source\repos\GP\GP\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
