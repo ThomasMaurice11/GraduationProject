@@ -7,21 +7,15 @@ using Microsoft.EntityFrameworkCore;
 using GP.DTOs.Chat;
 using GP.Services;
 using Microsoft.AspNetCore.SignalR;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using GP.Hubs;
-using DocumentFormat.OpenXml.InkML;
-using Microsoft.AspNetCore.Identity;
+using GP.Exceptions;
 
 namespace GP.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
     [Authorize]
-
-    
-
     public class ChatController : ControllerBase
     {
         private readonly AuthDbContext _context;
@@ -36,34 +30,67 @@ namespace GP.Controllers
         [HttpPost("start")]
         public async Task<IActionResult> StartChat(string receiverId)
         {
-            var senderId = User?.FindFirst("id")?.Value;
-            var roomName = GetRoomName(senderId, receiverId);
+            try
+            {
+                var senderId = User?.FindFirst("id")?.Value;
+                if (string.IsNullOrEmpty(senderId))
+                    throw new AppException("User is not authenticated.", StatusCodes.Status401Unauthorized, "Unauthorized");
 
-            // Optionally, you can store the room in the database if needed
-            return Ok(new { RoomName = roomName });
+                if (string.IsNullOrEmpty(receiverId))
+                    throw new AppException("Receiver ID cannot be null or empty.", StatusCodes.Status400BadRequest, "Bad Request");
+
+                var roomName = GetRoomName(senderId, receiverId);
+
+                return Ok(new { RoomName = roomName });
+            }
+            catch (AppException)
+            {
+                throw; // Let middleware handle
+            }
+            catch (Exception ex)
+            {
+                throw new AppException("Failed to start chat.", 500, ex.Message);
+            }
         }
 
         [HttpGet("messages")]
         public async Task<IActionResult> GetMessages(string receiverId)
         {
-            var senderId = User?.FindFirst("id")?.Value;
-            var roomName = GetRoomName(senderId, receiverId);
+            try
+            {
+                var senderId = User?.FindFirst("id")?.Value;
+                if (string.IsNullOrEmpty(senderId))
+                    throw new AppException("User is not authenticated.", StatusCodes.Status401Unauthorized, "Unauthorized");
 
-            var messages = await _context.ChatMessages
-                .Where(m => m.RoomName == roomName)
-                .OrderBy(m => m.Timestamp)
-                .Select(m => new
-                {
-                    Message = m.Message,
-                    Timestamp = m.Timestamp,
-                    SenderId = m.SenderId,
-                    ReceiverId = receiverId,
-                    RoomName = roomName,
-                    SenderName = m.SenderName
-                })
-                .ToListAsync();
+                if (string.IsNullOrEmpty(receiverId))
+                    throw new AppException("Receiver ID cannot be null or empty.", StatusCodes.Status400BadRequest, "Bad Request");
 
-            return Ok(messages);
+                var roomName = GetRoomName(senderId, receiverId);
+
+                var messages = await _context.ChatMessages
+                    .Where(m => m.RoomName == roomName)
+                    .OrderBy(m => m.Timestamp)
+                    .Select(m => new
+                    {
+                        Message = m.Message,
+                        Timestamp = m.Timestamp,
+                        SenderId = m.SenderId,
+                        ReceiverId = receiverId,
+                        RoomName = roomName,
+                        SenderName = m.SenderName
+                    })
+                    .ToListAsync();
+
+                return Ok(messages);
+            }
+            catch (AppException)
+            {
+                throw;
+            }
+            catch (Exception ex)
+            {
+                throw new AppException("Failed to retrieve messages.", 500, ex.Message);
+            }
         }
 
         private string GetRoomName(string senderId, string receiverId)
@@ -76,50 +103,48 @@ namespace GP.Controllers
         [HttpGet("PreviousChats")]
         public async Task<IActionResult> GetPreviousChats()
         {
-            // Get the current user's ID
-            var currentUserId = User?.FindFirst("id")?.Value;
-
-            if (string.IsNullOrEmpty(currentUserId))
+            try
             {
-                return Unauthorized("User not authenticated.");
-            }
+                var currentUserId = User?.FindFirst("id")?.Value;
 
-            // Get all unique rooms where the current user has participated
-            var rooms = await _context.ChatMessages
-                .Where(m => m.SenderId == currentUserId || m.ReceiverId == currentUserId)
-                .Select(m => m.RoomName)
-                .Distinct()
-                .ToListAsync();
+                if (string.IsNullOrEmpty(currentUserId))
+                    throw new AppException("User is not authenticated.", StatusCodes.Status401Unauthorized, "Unauthorized");
 
-            // Get the other user's details for each room
-            var previousChats = new List<PreviousChatDto>();
+                var rooms = await _context.ChatMessages
+                    .Where(m => m.SenderId == currentUserId || m.ReceiverId == currentUserId)
+                    .Select(m => m.RoomName)
+                    .Distinct()
+                    .ToListAsync();
 
-            foreach (var room in rooms)
-            {
-                // Extract the other user's ID from the room name
-                var userIds = room.Split('/');
-                var ReceiverId = userIds[0] == currentUserId ? userIds[1] : userIds[0];
+                var previousChats = new List<PreviousChatDto>();
 
-                // Get the other user's details (e.g., name)
-                //var otherUser = await _context.Users
-                //    .Where(u => u.Id == otherUserId)
-                //    .Select(u => new { u.Id, u.UserName })
-                //    .FirstOrDefaultAsync();
-
-
-
-                var ReceiverData = await _jwtTokenService.GetUserData(ReceiverId);
-                if (ReceiverData != null)
+                foreach (var room in rooms)
                 {
-                    previousChats.Add(new PreviousChatDto
+                    var userIds = room.Split('/');
+                    var receiverId = userIds[0] == currentUserId ? userIds[1] : userIds[0];
+
+                    var receiverData = await _jwtTokenService.GetUserData(receiverId);
+                    if (receiverData != null)
                     {
-                        RoomName = room,
-                        ReceiverId = ReceiverId,
-                        ReceiverName = ReceiverData.UserName
-                    });
+                        previousChats.Add(new PreviousChatDto
+                        {
+                            RoomName = room,
+                            ReceiverId = receiverId,
+                            ReceiverName = receiverData.UserName
+                        });
+                    }
                 }
+
+                return Ok(previousChats);
             }
-            return Ok(previousChats);
+            catch (AppException)
+            {
+                throw;
+            }
+            catch (Exception ex)
+            {
+                throw new AppException("Failed to fetch previous chats.", 500, ex.Message);
+            }
         }
     }
 }

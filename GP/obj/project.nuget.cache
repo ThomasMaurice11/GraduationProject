@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "F2aw0jBddB0=",
+  "dgSpecHash": "Dyp5J1AqnzY=",
   "success": true,
   "projectFilePath": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\GP.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\thoma\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\thoma\\.nuget\\packages\\documentformat.openxml\\3.2.0\\documentformat.openxml.3.2.0.nupkg.sha512",
     "C:\\Users\\thoma\\.nuget\\packages\\documentformat.openxml.framework\\3.2.0\\documentformat.openxml.framework.3.2.0.nupkg.sha512",
+    "C:\\Users\\thoma\\.nuget\\packages\\fluentassertions\\8.2.0\\fluentassertions.8.2.0.nupkg.sha512",
     "C:\\Users\\thoma\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\thoma\\.nuget\\packages\\jose-jwt\\5.1.1\\jose-jwt.5.1.1.nupkg.sha512",
     "C:\\Users\\thoma\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.3.0\\microsoft.aspnetcore.authentication.abstractions.2.3.0.nupkg.sha512",

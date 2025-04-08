@@ -32,6 +32,8 @@ public class AnimalsController : ControllerBase
                 Age = animalDto.Age,
                 Gender = animalDto.Gender,
                 HealthIssues = animalDto.HealthIssues,
+                FoundDate = animalDto.FoundDate,
+                CreationDate = DateTime.UtcNow // Set creation date to current UTC time
             };
 
             _context.Animals.Add(animal);
@@ -130,6 +132,8 @@ public class AnimalsController : ControllerBase
             Age = animal.Age,
             Gender = animal.Gender,
             HealthIssues = animal.HealthIssues,
+            FoundDate = animal.FoundDate,
+            CreationDate = animal.CreationDate,
             PhotoUrls = animal.Photos.Select(p => p.ImageUrl).ToList()
         };
     }

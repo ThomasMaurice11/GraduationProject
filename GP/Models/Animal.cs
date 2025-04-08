@@ -20,10 +20,13 @@ public class Animal
     [Required]
     public int Age { get; set; }
 
+    public string FoundDate { get; set; }
+
     [Required]
     public string Gender { get; set; }
 
     public string? HealthIssues { get; set; }
+    public DateTime CreationDate { get; set; }
 
     public ICollection<Photo> Photos { get; set; } = new List<Photo>();
 }

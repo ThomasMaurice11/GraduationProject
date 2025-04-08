@@ -1,15 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using GP.Models;
-using System;
 using System.Linq;
 using System.Threading.Tasks;
 using GP.DTOs;
-
-using GP.DTOs;
 using GP.DTOs.PetMarriageRequest;
 using GP.DTOs.Pet;
-
+using GP.Exceptions;
 
 namespace GP.Controllers
 {
@@ -24,112 +21,131 @@ namespace GP.Controllers
             _context = context;
         }
 
-        // GET: api/PetMarriageRequest
-        [HttpGet]
         [HttpGet]
         public async Task<IActionResult> GetRequests()
         {
-            var requests = await _context.PetMarriageRequests
-                .Include(r => r.SenderPet)
-                    .ThenInclude(p => p.Owner)
-                .Include(r => r.SenderPet)
-                    .ThenInclude(p => p.Photos) // Include SenderPet photos
-                .Include(r => r.ReceiverPet)
-                    .ThenInclude(p => p.Owner)
-                .Include(r => r.ReceiverPet)
-                    .ThenInclude(p => p.Photos) // Include ReceiverPet photos
-                .ToListAsync();
+            try
+            {
+                var requests = await _context.PetMarriageRequests
+                    .Include(r => r.SenderPet)
+                        .ThenInclude(p => p.Owner)
+                    .Include(r => r.SenderPet)
+                        .ThenInclude(p => p.Photos)
+                    .Include(r => r.ReceiverPet)
+                        .ThenInclude(p => p.Owner)
+                    .Include(r => r.ReceiverPet)
+                        .ThenInclude(p => p.Photos)
+                    .ToListAsync();
 
-            var result = requests.Select(r => MapToGetPetMarriageRequestDto(r)).ToList();
+                var result = requests.Select(r => MapToGetPetMarriageRequestDto(r)).ToList();
 
-            return Ok(result);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                throw new AppException($"Failed to fetch pet marriage requests: {ex.Message}");
+            }
         }
 
         [HttpGet("MyRequests/{receiverId}")]
         public async Task<IActionResult> GetMyRequests(int receiverId)
         {
-            var myRequests = await _context.PetMarriageRequests
-                .Include(r => r.SenderPet)
-                    .ThenInclude(p => p.Owner)
-                .Include(r => r.SenderPet)
-                    .ThenInclude(p => p.Photos) // Include SenderPet photos
-                .Include(r => r.ReceiverPet)
-                    .ThenInclude(p => p.Owner)
-                .Include(r => r.ReceiverPet)
-                    .ThenInclude(p => p.Photos) // Include ReceiverPet photos
-                .Where(r => r.ReceiverPetId == receiverId)
-                .ToListAsync();
-
-            var result = myRequests.Select(r => MapToGetPetMarriageRequestDto(r)).ToList();
-
-            if (!result.Any())
+            try
             {
-                return NotFound("No requests found for this receiver ID.");
-            }
+                var myRequests = await _context.PetMarriageRequests
+                    .Include(r => r.SenderPet)
+                        .ThenInclude(p => p.Owner)
+                    .Include(r => r.SenderPet)
+                        .ThenInclude(p => p.Photos)
+                    .Include(r => r.ReceiverPet)
+                        .ThenInclude(p => p.Owner)
+                    .Include(r => r.ReceiverPet)
+                        .ThenInclude(p => p.Photos)
+                    .Where(r => r.ReceiverPetId == receiverId)
+                    .ToListAsync();
 
-            return Ok(result);
+                var result = myRequests.Select(r => MapToGetPetMarriageRequestDto(r)).ToList();
+
+                if (!result.Any())
+                    throw new AppException("No requests found for this receiver ID.", 404, "Not Found");
+
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                throw new AppException($"Failed to fetch requests for receiver ID {receiverId}: {ex.Message}");
+            }
         }
 
-
-
-
-        // POST: api/PetMarriageRequest/make
         [HttpPost("MakeMarriageRequest")]
         public async Task<IActionResult> MakeRequest(PetMarriageRequestDto requestDto)
         {
-            if (!ModelState.IsValid)
+            try
             {
-                return BadRequest(ModelState);
+                if (!ModelState.IsValid)
+                    throw new AppException("Invalid request data", 400, "Bad Request");
+
+                var senderExists = await _context.Pets.AnyAsync(p => p.PetId == requestDto.SenderPetId);
+                var receiverExists = await _context.Pets.AnyAsync(p => p.PetId == requestDto.ReceiverPetId);
+
+                if (!senderExists || !receiverExists)
+                    throw new AppException("Sender or Receiver Pet does not exist", 404, "Not Found");
+
+                var request = new PetMarriageRequest
+                {
+                    SenderPetId = requestDto.SenderPetId,
+                    ReceiverPetId = requestDto.ReceiverPetId,
+                };
+
+                _context.PetMarriageRequests.Add(request);
+                await _context.SaveChangesAsync();
+
+                return Ok("Marriage request sent successfully.");
             }
-
-            var request = new PetMarriageRequest
+            catch (Exception ex)
             {
-                SenderPetId = requestDto.SenderPetId,
-                ReceiverPetId = requestDto.ReceiverPetId,
-            };
-
-            _context.Set<PetMarriageRequest>().Add(request);
-            await _context.SaveChangesAsync();
-
-            return Ok("Marriage request sent successfully.");
+                throw new AppException($"Failed to create marriage request: {ex.Message}");
+            }
         }
 
-        // PUT: api/PetMarriageRequest/accept/5
         [HttpPut("AcceptMarriageRequest/{id}")]
         public async Task<IActionResult> AcceptRequest(int id)
         {
-            var request = await _context.Set<PetMarriageRequest>().FindAsync(id);
-            if (request == null)
+            try
             {
-                return NotFound("Request not found.");
-            }
+                var request = await _context.PetMarriageRequests.FindAsync(id);
+                if (request == null)
+                    throw new AppException("Request not found.", 404, "Not Found");
 
-            request.Status = "Accepted";
-            await _context.SaveChangesAsync();
-            return Ok("Request accepted.");
+                request.Status = "Accepted";
+                await _context.SaveChangesAsync();
+                return Ok("Request accepted.");
+            }
+            catch (Exception ex)
+            {
+                throw new AppException($"Failed to accept request: {ex.Message}");
+            }
         }
 
-        // PUT: api/PetMarriageRequest/reject/5
         [HttpPut("RejectMarriageRequest/{id}")]
         public async Task<IActionResult> RejectRequest(int id)
         {
-            var request = await _context.Set<PetMarriageRequest>().FindAsync(id);
-            if (request == null)
+            try
             {
-                return NotFound("Request not found.");
-            }
+                var request = await _context.PetMarriageRequests.FindAsync(id);
+                if (request == null)
+                    throw new AppException("Request not found.", 404, "Not Found");
 
-            request.Status = "Rejected";
-            await _context.SaveChangesAsync();
-            return Ok("Request rejected.");
+                request.Status = "Rejected";
+                await _context.SaveChangesAsync();
+                return Ok("Request rejected.");
+            }
+            catch (Exception ex)
+            {
+                throw new AppException($"Failed to reject request: {ex.Message}");
+            }
         }
 
-
-
-
-
-
-        //private static GetPetMarriageRequestDto MapToGetPetMarriageRequestDto(PetMarriageRequest request)
         private GetPetMarriageRequestDto MapToGetPetMarriageRequestDto(PetMarriageRequest request)
         {
             return new GetPetMarriageRequestDto
@@ -144,7 +160,7 @@ namespace GP.Controllers
                     Gender = request.SenderPet.Gender,
                     HealthStatus = request.SenderPet.HealthStatus,
                     UserId = request.SenderPet.UserId,
-                    PhotoUrls = request.SenderPet.Photos.Select(p => p.ImageUrl).ToList(), // Include all photo URLs
+                    PhotoUrls = request.SenderPet.Photos.Select(p => p.ImageUrl).ToList(),
                     Owner = new OwnerDto
                     {
                         Id = request.SenderPet.Owner.Id,
@@ -160,7 +176,7 @@ namespace GP.Controllers
                     Gender = request.ReceiverPet.Gender,
                     HealthStatus = request.ReceiverPet.HealthStatus,
                     UserId = request.ReceiverPet.UserId,
-                    PhotoUrls = request.ReceiverPet.Photos.Select(p => p.ImageUrl).ToList(), // Include all photo URLs
+                    PhotoUrls = request.ReceiverPet.Photos.Select(p => p.ImageUrl).ToList(),
                     Owner = new OwnerDto
                     {
                         Id = request.ReceiverPet.Owner.Id,
@@ -171,29 +187,5 @@ namespace GP.Controllers
                 RequestedAt = request.RequestedAt
             };
         }
-
-
-
     }
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-   
-
-
-
-
-
-
-// I added DTOs for creating and retrieving requests! Let me know if you want to tweak anything. 🚀🐾

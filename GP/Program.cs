@@ -9,6 +9,9 @@ using GP.Services;
 using Microsoft.OpenApi.Models;
 using GP.Hubs;
 using GP.Middleware;
+using DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing;
+using Microsoft.Extensions.Configuration;
+using FluentAssertions.Common;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -72,6 +75,10 @@ builder.Services.AddAuthentication(options =>
         }
     };
 });
+
+
+builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
+
 
 
 builder.Services.AddScoped<JwtTokenService>();

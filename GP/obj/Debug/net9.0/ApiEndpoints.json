@@ -317,6 +317,16 @@
         "IsRequired": false
       },
       {
+        "Name": "FoundDate",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CreationDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
         "Name": "Gender",
         "Type": "System.String",
         "IsRequired": false
@@ -386,7 +396,7 @@
     "Parameters": [
       {
         "Name": "model",
-        "Type": "GP.DTOs.Auth.ForgotPasswordDto",
+        "Type": "GP.DTOs.Auth.ForgotPasswordModel",
         "IsRequired": true
       }
     ],
@@ -492,37 +502,11 @@
     "Parameters": [
       {
         "Name": "model",
-        "Type": "GP.DTOs.Auth.ResetPasswordDto",
+        "Type": "GP.DTOs.Auth.ResetPasswordModel",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
-  },
-  {
-    "ContainingType": "GP.Controllers.CartController",
-    "Method": "GetCart",
-    "RelativePath": "api/Cart/{userId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "userId",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "GP.DTOs.Cart.CartDTO",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
   },
   {
     "ContainingType": "GP.Controllers.CartController",
@@ -539,6 +523,26 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GP.Controllers.CartController",
+    "Method": "GetCart",
+    "RelativePath": "api/Cart/MyCart",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "GP.DTOs.Cart.CartDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "GP.Controllers.CartController",
@@ -650,7 +654,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[GP.DTOs.Clinic.GetClinicDto, GP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "GP.DTOs.Clinic.GetClinicDto",
         "MediaTypes": [
           "text/plain",
           "application/json",

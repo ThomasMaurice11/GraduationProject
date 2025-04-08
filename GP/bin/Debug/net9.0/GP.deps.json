@@ -9,6 +9,7 @@
       "GP/1.0.0": {
         "dependencies": {
           "DocumentFormat.OpenXml": "3.2.0",
+          "FluentAssertions": "8.2.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.1",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "9.0.2",
           "Microsoft.AspNetCore.OpenApi": "9.0.1",
@@ -76,6 +77,14 @@
           "lib/net8.0/DocumentFormat.OpenXml.Framework.dll": {
             "assemblyVersion": "3.2.0.0",
             "fileVersion": "3.2.0.0"
+          }
+        }
+      },
+      "FluentAssertions/8.2.0": {
+        "runtime": {
+          "lib/net6.0/FluentAssertions.dll": {
+            "assemblyVersion": "8.2.0.0",
+            "fileVersion": "8.2.0.0"
           }
         }
       },
@@ -968,6 +977,13 @@
       "sha512": "sha512-e1neOKqRnSHUom4JQEorAoZ67aiJOp6+Xzsu0fc6IYfFcgQn6roo+w6i2w//N2u/5ilEfvLr35bNO9zaIN7r7g==",
       "path": "documentformat.openxml.framework/3.2.0",
       "hashPath": "documentformat.openxml.framework.3.2.0.nupkg.sha512"
+    },
+    "FluentAssertions/8.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Gh4jkECcrR0i17ofCVqsiVz2+lxC+p5TYFPCrbZFi7eQQWGEZhvCDwvhycBKX1Kmtbd+H2CW/ugW7wdH9Br9NQ==",
+      "path": "fluentassertions/8.2.0",
+      "hashPath": "fluentassertions.8.2.0.nupkg.sha512"
     },
     "jose-jwt/5.1.1": {
       "type": "package",

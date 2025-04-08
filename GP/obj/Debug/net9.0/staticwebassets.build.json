@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "huacno+m9Bx9ldYrcThBUp8ZQwM2+rU95s1XcpBpwnE=",
+  "Hash": "9KWb8MgVOTbzuAsH/mZKx51x5E5SDH7NXkK8TiBunko=",
   "Source": "GP",
   "BasePath": "_content/GP",
   "Mode": "Default",
@@ -393,6 +393,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\a3e60bff-a092-497a-af45-016a951e9dfc.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\wwwroot\\images\\b683918e-9556-4d90-ac4b-00d0fe9c6cf5.jpg",
+      "SourceId": "GP",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\wwwroot\\",
+      "BasePath": "_content/GP",
+      "RelativePath": "images/b683918e-9556-4d90-ac4b-00d0fe9c6cf5#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "yf4r9l9ag0",
+      "Integrity": "woPQ0ucM3dCgC3sXH+mYa/8c7cVR070ig8YGlVnjsqc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\b683918e-9556-4d90-ac4b-00d0fe9c6cf5.jpg"
     },
     {
       "Identity": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\wwwroot\\images\\bcebb4ba-b1d4-471f-94c7-d690211e6a89.webp",
@@ -2058,6 +2079,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-kYFMN/RUGAl73jXTFivWMSg3b3xm/ZPm2DF8jAcD18g="
+        }
+      ]
+    },
+    {
+      "Route": "images/b683918e-9556-4d90-ac4b-00d0fe9c6cf5.jpg",
+      "AssetFile": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\wwwroot\\images\\b683918e-9556-4d90-ac4b-00d0fe9c6cf5.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5525"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"woPQ0ucM3dCgC3sXH+mYa/8c7cVR070ig8YGlVnjsqc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 12:47:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-woPQ0ucM3dCgC3sXH+mYa/8c7cVR070ig8YGlVnjsqc="
+        }
+      ]
+    },
+    {
+      "Route": "images/b683918e-9556-4d90-ac4b-00d0fe9c6cf5.yf4r9l9ag0.jpg",
+      "AssetFile": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\wwwroot\\images\\b683918e-9556-4d90-ac4b-00d0fe9c6cf5.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5525"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"woPQ0ucM3dCgC3sXH+mYa/8c7cVR070ig8YGlVnjsqc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 12:47:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "yf4r9l9ag0"
+        },
+        {
+          "Name": "label",
+          "Value": "images/b683918e-9556-4d90-ac4b-00d0fe9c6cf5.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-woPQ0ucM3dCgC3sXH+mYa/8c7cVR070ig8YGlVnjsqc="
         }
       ]
     },

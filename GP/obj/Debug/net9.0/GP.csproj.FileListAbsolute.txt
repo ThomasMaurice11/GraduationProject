@@ -182,3 +182,4 @@ C:\Users\thoma\source\repos\GP\GP\bin\Debug\net9.0\System.Net.WebSockets.WebSock
 C:\Users\thoma\source\repos\GP\GP\obj\Debug\net9.0\GP.sourcelink.json
 C:\Users\thoma\source\repos\GP\GP\bin\Debug\net9.0\appsettings.Docker.json
 C:\Users\thoma\source\repos\GP\GP\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\thoma\source\repos\GP\GP\bin\Debug\net9.0\FluentAssertions.dll
