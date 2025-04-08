@@ -1160,7 +1160,7 @@
         }
       }
     },
-    "/api/Clinic/MyCLinics": {
+    "/api/Clinic/MyClinics": {
       "get": {
         "tags": [
           "Clinic"
@@ -1584,6 +1584,10 @@
             "type": "string",
             "nullable": true
           },
+          "locationUrl": {
+            "type": "string",
+            "nullable": true
+          },
           "details": {
             "type": "string",
             "nullable": true
@@ -1926,6 +1930,10 @@
             "type": "string",
             "nullable": true
           },
+          "locationUrl": {
+            "type": "string",
+            "nullable": true
+          },
           "doctor": {
             "$ref": "#/components/schemas/DoctorDataDto"
           },
@@ -2108,6 +2116,10 @@
             "nullable": true
           },
           "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "locationUrl": {
             "type": "string",
             "nullable": true
           },

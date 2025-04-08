@@ -11,7 +11,7 @@
 
         public string ?Address { get; set; }
 
-
+        public string? LocationUrl { get; set; }
         public string? Details { get; set; }
 
         public string? Number { get; set; }

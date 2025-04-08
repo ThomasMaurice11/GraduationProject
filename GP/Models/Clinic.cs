@@ -14,6 +14,8 @@ namespace GP.Models
         [ForeignKey("DoctorId")]
         public Doctor Doctor { get; set; }
 
+        public string LocationUrl { get; set; } 
+
         [Required]
         public string Name { get; set; }
 

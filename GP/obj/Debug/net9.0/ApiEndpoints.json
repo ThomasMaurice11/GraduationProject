@@ -704,7 +704,7 @@
   {
     "ContainingType": "GP.Controllers.ClinicController",
     "Method": "GetMyClinics",
-    "RelativePath": "api/Clinic/MyCLinics",
+    "RelativePath": "api/Clinic/MyClinics",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

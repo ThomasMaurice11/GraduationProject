@@ -11,8 +11,8 @@ namespace GP.DTOs.Clinic
 
         
         public string DoctorId { get; set; }
+        public string LocationUrl { get; set; }
 
-        
         public DoctorDataDto Doctor { get; set; }
 
         

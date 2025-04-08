@@ -43,6 +43,7 @@ namespace GP.Controllers
                 },
                 Name = clinic.Name,
                 Address = clinic.Address,
+                LocationUrl = clinic.LocationUrl,
                 Details = clinic.Details,
                 Number = clinic.Number,
                 CLinicEmail = clinic.CLinicEmail
@@ -72,7 +73,7 @@ namespace GP.Controllers
             return Ok(MapToGetClinicDto(clinic));
         }
 
-        [HttpGet("MyCLinics")]
+        [HttpGet("MyClinics")]
         public async Task<ActionResult<IEnumerable<GetClinicDto>>> GetMyClinics()
         {
             var token = HttpContext.Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
@@ -100,6 +101,7 @@ namespace GP.Controllers
                 DoctorId = doctorId,
                 Name = addClinic.Name,
                 Address = addClinic.Address,
+                LocationUrl = addClinic.LocationUrl,
                 Details = addClinic.Details,
                 Number = addClinic.Number,
                 CLinicEmail = addClinic.CLinicEmail,
@@ -124,6 +126,7 @@ namespace GP.Controllers
 
             clinic.Name = updateClinicDto.Name;
             clinic.Address = updateClinicDto.Address;
+            clinic.LocationUrl = updateClinicDto.LocationUrl;
             clinic.Details = updateClinicDto.Details;
             clinic.Number = updateClinicDto.Number;
             clinic.CLinicEmail = updateClinicDto.CLinicEmail;
@@ -138,8 +141,7 @@ namespace GP.Controllers
             {
                 if (!ClinicExists(id))
                     throw new AppException($"Clinic with ID {id} no longer exists", 404, "Not Found");
-
-                throw; // Let global middleware handle this
+                throw;
             }
 
             return NoContent();
