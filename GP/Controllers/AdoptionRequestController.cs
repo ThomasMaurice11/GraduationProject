@@ -117,7 +117,7 @@ namespace GP.Controllers
                         Breed = r.Pet.Breed,
                         Age = r.Pet.Age,
                         Gender = r.Pet.Gender,
-                        HealthStatus = r.Pet.HealthStatus,
+                        HealthIssues = r.Pet.HealthIssues,
                         UserId = r.Pet.UserId,
                         PhotoUrls = r.Pet.Photos.Select(i => i.ImageUrl).ToList(),
                         Owner = new OwnerDto

@@ -502,6 +502,118 @@
         }
       }
     },
+    "/api/AnimalMarriageRequest": {
+      "get": {
+        "tags": [
+          "AnimalMarriageRequest"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/AnimalMarriageRequest/MyRequests/{receiverId}": {
+      "get": {
+        "tags": [
+          "AnimalMarriageRequest"
+        ],
+        "parameters": [
+          {
+            "name": "receiverId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/AnimalMarriageRequest/MakeMarriageRequest": {
+      "post": {
+        "tags": [
+          "AnimalMarriageRequest"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AnimalMarriageRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AnimalMarriageRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AnimalMarriageRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/AnimalMarriageRequest/AcceptMarriageRequest/{id}": {
+      "put": {
+        "tags": [
+          "AnimalMarriageRequest"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/AnimalMarriageRequest/RejectMarriageRequest/{id}": {
+      "put": {
+        "tags": [
+          "AnimalMarriageRequest"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/Animals": {
       "post": {
         "tags": [
@@ -525,10 +637,6 @@
                   },
                   "FoundDate": {
                     "type": "string"
-                  },
-                  "CreationDate": {
-                    "type": "string",
-                    "format": "date-time"
                   },
                   "Gender": {
                     "type": "string"
@@ -556,9 +664,6 @@
                   "style": "form"
                 },
                 "FoundDate": {
-                  "style": "form"
-                },
-                "CreationDate": {
                   "style": "form"
                 },
                 "Gender": {
@@ -1054,7 +1159,24 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetClinicDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetClinicDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetClinicDto"
+                }
+              }
+            }
           }
         }
       }
@@ -1219,13 +1341,16 @@
                   "Title": {
                     "type": "string"
                   },
+                  "HealthIssues": {
+                    "type": "string"
+                  },
+                  "Description": {
+                    "type": "string"
+                  },
                   "Breed": {
                     "type": "string"
                   },
                   "Gender": {
-                    "type": "string"
-                  },
-                  "HealthStatus": {
                     "type": "string"
                   },
                   "Photos": {
@@ -1247,13 +1372,16 @@
                 "Title": {
                   "style": "form"
                 },
+                "HealthIssues": {
+                  "style": "form"
+                },
+                "Description": {
+                  "style": "form"
+                },
                 "Breed": {
                   "style": "form"
                 },
                 "Gender": {
-                  "style": "form"
-                },
-                "HealthStatus": {
                   "style": "form"
                 },
                 "Photos": {
@@ -1326,10 +1454,13 @@
                   "Title": {
                     "type": "string"
                   },
-                  "Gender": {
+                  "HealthIssues": {
                     "type": "string"
                   },
-                  "HealthStatus": {
+                  "Description": {
+                    "type": "string"
+                  },
+                  "Gender": {
                     "type": "string"
                   },
                   "Photos": {
@@ -1354,10 +1485,13 @@
                 "Title": {
                   "style": "form"
                 },
-                "Gender": {
+                "HealthIssues": {
                   "style": "form"
                 },
-                "HealthStatus": {
+                "Description": {
+                  "style": "form"
+                },
+                "Gender": {
                   "style": "form"
                 },
                 "Photos": {
@@ -1728,6 +1862,20 @@
         },
         "additionalProperties": false
       },
+      "AnimalMarriageRequestDto": {
+        "type": "object",
+        "properties": {
+          "senderPetId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "receiverAnimalId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "AnimalResponseDto": {
         "type": "object",
         "properties": {
@@ -2033,7 +2181,11 @@
             "type": "string",
             "nullable": true
           },
-          "healthStatus": {
+          "healthIssues": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
             "type": "string",
             "nullable": true
           },

@@ -3,12 +3,112 @@
   "WorkspaceRootPath": "C:\\Users\\thoma\\source\\repos\\GP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\models\\clinic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\models\\clinic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\controllers\\adoptionrequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\controllers\\adoptionrequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\controllers\\petmarriagerequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\controllers\\petmarriagerequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\controllers\\animalmarriagerequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\controllers\\animalmarriagerequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\controllers\\petcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\controllers\\petcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\dtos\\pet\\petupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\dtos\\pet\\petupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\dtos\\pet\\petresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\dtos\\pet\\petresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\dtos\\pet\\petcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\dtos\\pet\\petcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\models\\pet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\models\\pet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\authdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\authdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\controllers\\animalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\controllers\\animalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\models\\animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\models\\animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\models\\animalmarriagerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\models\\animalmarriagerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\dtos\\animalmarriagerequest\\animalmarriagerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\dtos\\animalmarriagerequest\\animalmarriagerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\dtos\\petmarriagerequest\\petmarriagerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\dtos\\petmarriagerequest\\petmarriagerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\dtos\\animalmarriagerequest\\getanimalmarriagerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\dtos\\animalmarriagerequest\\getanimalmarriagerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\dtos\\petmarriagerequest\\getpetmarriagerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\dtos\\petmarriagerequest\\getpetmarriagerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\models\\petmarriagerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\models\\petmarriagerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\controllers\\cliniccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\controllers\\cliniccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\middleware\\globalexceptionhandlermiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\middleware\\globalexceptionhandlermiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\dtos\\animal\\animalcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\dtos\\animal\\animalcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\dtos\\clinic\\addclinicdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\dtos\\clinic\\addclinicdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\dtos\\animal\\animalresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\dtos\\animal\\animalresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\models\\clinic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\models\\clinic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\dtos\\clinic\\updateclinicdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,10 +121,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\dtos\\clinic\\doctordatadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\dtos\\clinic\\doctordatadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\dtos\\clinic\\addclinicdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\dtos\\clinic\\addclinicdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -47,10 +143,6 @@
       "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\dtos\\auth\\resetpasswordmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\dtos\\auth\\resetpasswordmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -71,10 +163,6 @@
       "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\models\\emailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\controllers\\animalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\controllers\\animalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\dtos\\auth\\forgotpasswordmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\dtos\\auth\\forgotpasswordmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -87,52 +175,8 @@
       "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\dtos\\auth\\forgotpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\controllers\\petmarriagerequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\controllers\\petmarriagerequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\controllers\\petcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\controllers\\petcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\models\\pet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\models\\pet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\models\\animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\models\\animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\dtos\\animal\\animalcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\dtos\\animal\\animalcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\dtos\\animal\\updateanimaldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\dtos\\animal\\updateanimaldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\dtos\\animal\\animalresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\dtos\\animal\\animalresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\controllers\\adoptionrequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\controllers\\adoptionrequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\middleware\\globalexceptionhandlermiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|solutionrelative:gp\\middleware\\globalexceptionhandlermiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{21A0F3DA-0D77-4001-BD37-AF70ED94E9FC}|GP\\GP.csproj|c:\\users\\thoma\\source\\repos\\gp\\gp\\exceptions\\appexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -158,7 +202,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -171,273 +215,249 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "UpdateClinicDto.cs",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Clinic\\UpdateClinicDto.cs",
-              "RelativeDocumentMoniker": "GP\\DTOs\\Clinic\\UpdateClinicDto.cs",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Clinic\\UpdateClinicDto.cs",
-              "RelativeToolTip": "GP\\DTOs\\Clinic\\UpdateClinicDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAWAAAAAAAAAA==",
+              "Title": "AnimalMarriageRequestController.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\AnimalMarriageRequestController.cs",
+              "RelativeDocumentMoniker": "GP\\Controllers\\AnimalMarriageRequestController.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\AnimalMarriageRequestController.cs",
+              "RelativeToolTip": "GP\\Controllers\\AnimalMarriageRequestController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJwAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T14:36:34.93Z",
+              "WhenOpened": "2025-04-10T02:06:28.155Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GetClinicDto.cs",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Clinic\\GetClinicDto.cs",
-              "RelativeDocumentMoniker": "GP\\DTOs\\Clinic\\GetClinicDto.cs",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Clinic\\GetClinicDto.cs",
-              "RelativeToolTip": "GP\\DTOs\\Clinic\\GetClinicDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "Animal.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Models\\Animal.cs",
+              "RelativeDocumentMoniker": "GP\\Models\\Animal.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Models\\Animal.cs",
+              "RelativeToolTip": "GP\\Models\\Animal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T14:36:30.723Z",
+              "WhenOpened": "2025-04-08T12:41:06.929Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DoctorDataDto.cs",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Clinic\\DoctorDataDto.cs",
-              "RelativeDocumentMoniker": "GP\\DTOs\\Clinic\\DoctorDataDto.cs",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Clinic\\DoctorDataDto.cs",
-              "RelativeToolTip": "GP\\DTOs\\Clinic\\DoctorDataDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "Pet.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Models\\Pet.cs",
+              "RelativeDocumentMoniker": "GP\\Models\\Pet.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Models\\Pet.cs",
+              "RelativeToolTip": "GP\\Models\\Pet.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAYwBkAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T14:36:29.788Z",
+              "WhenOpened": "2025-04-08T13:07:18.696Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AddClinicDto.cs",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Clinic\\AddClinicDto.cs",
-              "RelativeDocumentMoniker": "GP\\DTOs\\Clinic\\AddClinicDto.cs",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Clinic\\AddClinicDto.cs",
-              "RelativeToolTip": "GP\\DTOs\\Clinic\\AddClinicDto.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T14:36:22.075Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Clinic.cs",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Models\\Clinic.cs",
-              "RelativeDocumentMoniker": "GP\\Models\\Clinic.cs",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Models\\Clinic.cs",
-              "RelativeToolTip": "GP\\Models\\Clinic.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T14:35:01.13Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "docker-compose.yml",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\docker-compose.yml",
-              "RelativeDocumentMoniker": "GP\\docker-compose.yml",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\docker-compose.yml",
-              "RelativeToolTip": "GP\\docker-compose.yml",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2025-04-08T14:20:16.87Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "ForgotPasswordDto.cs",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Auth\\ForgotPasswordDto.cs",
-              "RelativeDocumentMoniker": "GP\\DTOs\\Auth\\ForgotPasswordDto.cs",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Auth\\ForgotPasswordDto.cs",
-              "RelativeToolTip": "GP\\DTOs\\Auth\\ForgotPasswordDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T13:28:09.241Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "EmailService.cs",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Services\\EmailService.cs",
-              "RelativeDocumentMoniker": "GP\\Services\\EmailService.cs",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Services\\EmailService.cs",
-              "RelativeToolTip": "GP\\Services\\EmailService.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAAAGUAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T13:25:24.713Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 9,
               "Title": "AnimalController.cs",
               "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\AnimalController.cs",
               "RelativeDocumentMoniker": "GP\\Controllers\\AnimalController.cs",
               "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\AnimalController.cs",
               "RelativeToolTip": "GP\\Controllers\\AnimalController.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAAAB0AAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAAAuwIUAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T12:41:53.212Z"
+              "WhenOpened": "2025-04-07T12:41:53.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PetCreateDto.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Pet\\PetCreateDto.cs",
+              "RelativeDocumentMoniker": "GP\\DTOs\\Pet\\PetCreateDto.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Pet\\PetCreateDto.cs",
+              "RelativeToolTip": "GP\\DTOs\\Pet\\PetCreateDto.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T17:48:50.087Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AuthDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\AuthDbContext.cs",
+              "RelativeDocumentMoniker": "GP\\AuthDbContext.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\AuthDbContext.cs",
+              "RelativeToolTip": "GP\\AuthDbContext.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAAAD8AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T02:07:52.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PetController.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\PetController.cs",
+              "RelativeDocumentMoniker": "GP\\Controllers\\PetController.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\PetController.cs",
+              "RelativeToolTip": "GP\\Controllers\\PetController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8BAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T13:03:37.946Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "PetMarriageRequestController.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\PetMarriageRequestController.cs",
+              "RelativeDocumentMoniker": "GP\\Controllers\\PetMarriageRequestController.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\PetMarriageRequestController.cs",
+              "RelativeToolTip": "GP\\Controllers\\PetMarriageRequestController.cs",
+              "ViewState": "AgIAAKQAAAAAAAAAAAAuwLAAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T13:16:35.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdoptionRequestController.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\AdoptionRequestController.cs",
+              "RelativeDocumentMoniker": "GP\\Controllers\\AdoptionRequestController.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\AdoptionRequestController.cs",
+              "RelativeToolTip": "GP\\Controllers\\AdoptionRequestController.cs",
+              "ViewState": "AgIAAKABAAAAAAAAAAAAAHcAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T12:57:32.941Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AnimalMarriageRequest.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Models\\AnimalMarriageRequest.cs",
+              "RelativeDocumentMoniker": "GP\\Models\\AnimalMarriageRequest.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Models\\AnimalMarriageRequest.cs",
+              "RelativeToolTip": "GP\\Models\\AnimalMarriageRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T01:46:51.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PetResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Pet\\PetResponseDto.cs",
+              "RelativeDocumentMoniker": "GP\\DTOs\\Pet\\PetResponseDto.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Pet\\PetResponseDto.cs",
+              "RelativeToolTip": "GP\\DTOs\\Pet\\PetResponseDto.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwAwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T02:45:29.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PetUpdateDto.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Pet\\PetUpdateDto.cs",
+              "RelativeDocumentMoniker": "GP\\DTOs\\Pet\\PetUpdateDto.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Pet\\PetUpdateDto.cs",
+              "RelativeToolTip": "GP\\DTOs\\Pet\\PetUpdateDto.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T02:45:44.393Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AnimalMarriageRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\AnimalMarriageRequest\\AnimalMarriageRequestDto.cs",
+              "RelativeDocumentMoniker": "GP\\DTOs\\AnimalMarriageRequest\\AnimalMarriageRequestDto.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\AnimalMarriageRequest\\AnimalMarriageRequestDto.cs",
+              "RelativeToolTip": "GP\\DTOs\\AnimalMarriageRequest\\AnimalMarriageRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T01:57:02.944Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PetMarriageRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\PetMarriageRequest\\PetMarriageRequestDto.cs",
+              "RelativeDocumentMoniker": "GP\\DTOs\\PetMarriageRequest\\PetMarriageRequestDto.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\PetMarriageRequest\\PetMarriageRequestDto.cs",
+              "RelativeToolTip": "GP\\DTOs\\PetMarriageRequest\\PetMarriageRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T01:56:42.932Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "GetAnimalMarriageRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\AnimalMarriageRequest\\GetAnimalMarriageRequestDto.cs",
+              "RelativeDocumentMoniker": "GP\\DTOs\\AnimalMarriageRequest\\GetAnimalMarriageRequestDto.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\AnimalMarriageRequest\\GetAnimalMarriageRequestDto.cs",
+              "RelativeToolTip": "GP\\DTOs\\AnimalMarriageRequest\\GetAnimalMarriageRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T01:49:17.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "GetPetMarriageRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\PetMarriageRequest\\GetPetMarriageRequestDto.cs",
+              "RelativeDocumentMoniker": "GP\\DTOs\\PetMarriageRequest\\GetPetMarriageRequestDto.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\PetMarriageRequest\\GetPetMarriageRequestDto.cs",
+              "RelativeToolTip": "GP\\DTOs\\PetMarriageRequest\\GetPetMarriageRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T01:48:17.203Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PetMarriageRequest.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Models\\PetMarriageRequest.cs",
+              "RelativeDocumentMoniker": "GP\\Models\\PetMarriageRequest.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Models\\PetMarriageRequest.cs",
+              "RelativeToolTip": "GP\\Models\\PetMarriageRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T01:25:22.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "ClinicController.cs",
               "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\ClinicController.cs",
               "RelativeDocumentMoniker": "GP\\Controllers\\ClinicController.cs",
               "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\ClinicController.cs",
               "RelativeToolTip": "GP\\Controllers\\ClinicController.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAAAKcAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAcwHkAAAB9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-08T13:15:00.185Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "GP\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\appsettings.Development.json",
-              "RelativeToolTip": "GP\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-08T12:16:57.585Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "GP\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "GP\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAANMAAAAAAAAAAAAgwOUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T21:21:41.784Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "appsettings.Docker.json",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\appsettings.Docker.json",
-              "RelativeDocumentMoniker": "GP\\appsettings.Docker.json",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\appsettings.Docker.json",
-              "RelativeToolTip": "GP\\appsettings.Docker.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-08T12:16:58.303Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\appsettings.json",
-              "RelativeDocumentMoniker": "GP\\appsettings.json",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\appsettings.json",
-              "RelativeToolTip": "GP\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-08T14:14:39.066Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Dockerfile",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Dockerfile",
-              "RelativeDocumentMoniker": "GP\\Dockerfile",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Dockerfile",
-              "RelativeToolTip": "GP\\Dockerfile",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-04-08T14:24:14.663Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 19,
-              "Title": "ResetPasswordDto.cs",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Auth\\ResetPasswordDto.cs",
-              "RelativeDocumentMoniker": "GP\\DTOs\\Auth\\ResetPasswordDto.cs",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Auth\\ResetPasswordDto.cs",
-              "RelativeToolTip": "GP\\DTOs\\Auth\\ResetPasswordDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAIAAAAAAAAAA==",
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "GP\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "GP\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T13:28:17.634Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "IEmailService.cs",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Services\\IEmailService.cs",
-              "RelativeDocumentMoniker": "GP\\Services\\IEmailService.cs",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Services\\IEmailService.cs",
-              "RelativeToolTip": "GP\\Services\\IEmailService.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAowAkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T13:30:10.865Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ResetPasswordModel.cs",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Auth\\ResetPasswordModel.cs",
-              "RelativeDocumentMoniker": "GP\\DTOs\\Auth\\ResetPasswordModel.cs",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Auth\\ResetPasswordModel.cs",
-              "RelativeToolTip": "GP\\DTOs\\Auth\\ResetPasswordModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T13:28:54.77Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Program.cs",
-              "RelativeDocumentMoniker": "GP\\Program.cs",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Program.cs",
-              "RelativeToolTip": "GP\\Program.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAAAFEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T12:59:45.931Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ForgotPasswordModel.cs",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Auth\\ForgotPasswordModel.cs",
-              "RelativeDocumentMoniker": "GP\\DTOs\\Auth\\ForgotPasswordModel.cs",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Auth\\ForgotPasswordModel.cs",
-              "RelativeToolTip": "GP\\DTOs\\Auth\\ForgotPasswordModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T13:29:13.863Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "EmailSettings.cs",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Models\\EmailSettings.cs",
-              "RelativeDocumentMoniker": "GP\\Models\\EmailSettings.cs",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Models\\EmailSettings.cs",
-              "RelativeToolTip": "GP\\Models\\EmailSettings.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T13:31:20.944Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "PetMarriageRequestController.cs",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\PetMarriageRequestController.cs",
-              "RelativeDocumentMoniker": "GP\\Controllers\\PetMarriageRequestController.cs",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\PetMarriageRequestController.cs",
-              "RelativeToolTip": "GP\\Controllers\\PetMarriageRequestController.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAQwL8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T13:16:35.399Z"
+              "WhenOpened": "2025-04-07T12:14:00.054Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -453,43 +473,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Pet.cs",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Models\\Pet.cs",
-              "RelativeDocumentMoniker": "GP\\Models\\Pet.cs",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Models\\Pet.cs",
-              "RelativeToolTip": "GP\\Models\\Pet.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAcwCUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T13:07:18.696Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "AnimalCreateDto.cs",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Animal\\AnimalCreateDto.cs",
-              "RelativeDocumentMoniker": "GP\\DTOs\\Animal\\AnimalCreateDto.cs",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Animal\\AnimalCreateDto.cs",
-              "RelativeToolTip": "GP\\DTOs\\Animal\\AnimalCreateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T12:41:37.144Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Animal.cs",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Models\\Animal.cs",
-              "RelativeDocumentMoniker": "GP\\Models\\Animal.cs",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Models\\Animal.cs",
-              "RelativeToolTip": "GP\\Models\\Animal.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABwAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T12:41:06.929Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "CartController.cs",
               "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\CartController.cs",
               "RelativeDocumentMoniker": "GP\\Controllers\\CartController.cs",
@@ -501,19 +485,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "UpdateAnimalDto.cs",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Animal\\UpdateAnimalDto.cs",
-              "RelativeDocumentMoniker": "GP\\DTOs\\Animal\\UpdateAnimalDto.cs",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Animal\\UpdateAnimalDto.cs",
-              "RelativeToolTip": "GP\\DTOs\\Animal\\UpdateAnimalDto.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAwAwAAAAkAAAAAAAAAA==",
+              "DocumentIndex": 21,
+              "Title": "AddClinicDto.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Clinic\\AddClinicDto.cs",
+              "RelativeDocumentMoniker": "GP\\DTOs\\Clinic\\AddClinicDto.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Clinic\\AddClinicDto.cs",
+              "RelativeToolTip": "GP\\DTOs\\Clinic\\AddClinicDto.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAuwBAAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T12:41:49.128Z"
+              "WhenOpened": "2025-04-08T14:36:22.075Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 20,
+              "Title": "AnimalCreateDto.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Animal\\AnimalCreateDto.cs",
+              "RelativeDocumentMoniker": "GP\\DTOs\\Animal\\AnimalCreateDto.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Animal\\AnimalCreateDto.cs",
+              "RelativeToolTip": "GP\\DTOs\\Animal\\AnimalCreateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T12:41:37.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "GlobalExceptionHandlerMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Middleware\\GlobalExceptionHandlerMiddleware.cs",
+              "RelativeDocumentMoniker": "GP\\Middleware\\GlobalExceptionHandlerMiddleware.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Middleware\\GlobalExceptionHandlerMiddleware.cs",
+              "RelativeToolTip": "GP\\Middleware\\GlobalExceptionHandlerMiddleware.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAAABcAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T12:40:03.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "AnimalResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Animal\\AnimalResponseDto.cs",
               "RelativeDocumentMoniker": "GP\\DTOs\\Animal\\AnimalResponseDto.cs",
@@ -525,31 +535,235 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "PetController.cs",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\PetController.cs",
-              "RelativeDocumentMoniker": "GP\\Controllers\\PetController.cs",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\PetController.cs",
-              "RelativeToolTip": "GP\\Controllers\\PetController.cs",
-              "ViewState": "AgIAAKQAAAAAAAAAAAAAAAgBAAAnAAAAAAAAAA==",
+              "DocumentIndex": 25,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "GP\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "GP\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAANMAAAAAAAAAAAAgwOUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T13:03:37.946Z"
+              "WhenOpened": "2025-04-06T21:21:41.784Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "AdoptionRequestController.cs",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\AdoptionRequestController.cs",
-              "RelativeDocumentMoniker": "GP\\Controllers\\AdoptionRequestController.cs",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\AdoptionRequestController.cs",
-              "RelativeToolTip": "GP\\Controllers\\AdoptionRequestController.cs",
-              "ViewState": "AgIAAFMBAAAAAAAAAAAuwGQBAAA4AAAAAAAAAA==",
+              "DocumentIndex": 26,
+              "Title": "Clinic.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Models\\Clinic.cs",
+              "RelativeDocumentMoniker": "GP\\Models\\Clinic.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Models\\Clinic.cs",
+              "RelativeToolTip": "GP\\Models\\Clinic.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T12:57:32.941Z"
+              "WhenOpened": "2025-04-08T14:35:01.13Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Services\\EmailService.cs",
+              "RelativeDocumentMoniker": "GP\\Services\\EmailService.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Services\\EmailService.cs",
+              "RelativeToolTip": "GP\\Services\\EmailService.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAAAGUAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T13:25:24.713Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "ForgotPasswordDto.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Auth\\ForgotPasswordDto.cs",
+              "RelativeDocumentMoniker": "GP\\DTOs\\Auth\\ForgotPasswordDto.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Auth\\ForgotPasswordDto.cs",
+              "RelativeToolTip": "GP\\DTOs\\Auth\\ForgotPasswordDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T13:28:09.241Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "docker-compose.yml",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\docker-compose.yml",
+              "RelativeDocumentMoniker": "GP\\docker-compose.yml",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\docker-compose.yml",
+              "RelativeToolTip": "GP\\docker-compose.yml",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2025-04-08T14:20:16.87Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "DoctorDataDto.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Clinic\\DoctorDataDto.cs",
+              "RelativeDocumentMoniker": "GP\\DTOs\\Clinic\\DoctorDataDto.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Clinic\\DoctorDataDto.cs",
+              "RelativeToolTip": "GP\\DTOs\\Clinic\\DoctorDataDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T14:36:29.788Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "GetClinicDto.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Clinic\\GetClinicDto.cs",
+              "RelativeDocumentMoniker": "GP\\DTOs\\Clinic\\GetClinicDto.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Clinic\\GetClinicDto.cs",
+              "RelativeToolTip": "GP\\DTOs\\Clinic\\GetClinicDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T14:36:30.723Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "UpdateClinicDto.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Clinic\\UpdateClinicDto.cs",
+              "RelativeDocumentMoniker": "GP\\DTOs\\Clinic\\UpdateClinicDto.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Clinic\\UpdateClinicDto.cs",
+              "RelativeToolTip": "GP\\DTOs\\Clinic\\UpdateClinicDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T14:36:34.93Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 33,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "GP\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\appsettings.Development.json",
+              "RelativeToolTip": "GP\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-08T12:16:57.585Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "appsettings.Docker.json",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\appsettings.Docker.json",
+              "RelativeDocumentMoniker": "GP\\appsettings.Docker.json",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\appsettings.Docker.json",
+              "RelativeToolTip": "GP\\appsettings.Docker.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-08T12:16:58.303Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\appsettings.json",
+              "RelativeDocumentMoniker": "GP\\appsettings.json",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\appsettings.json",
+              "RelativeToolTip": "GP\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-08T14:14:39.066Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Dockerfile",
+              "RelativeDocumentMoniker": "GP\\Dockerfile",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Dockerfile",
+              "RelativeToolTip": "GP\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-04-08T14:24:14.663Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "ResetPasswordDto.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Auth\\ResetPasswordDto.cs",
+              "RelativeDocumentMoniker": "GP\\DTOs\\Auth\\ResetPasswordDto.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Auth\\ResetPasswordDto.cs",
+              "RelativeToolTip": "GP\\DTOs\\Auth\\ResetPasswordDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T13:28:17.634Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "IEmailService.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Services\\IEmailService.cs",
+              "RelativeDocumentMoniker": "GP\\Services\\IEmailService.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Services\\IEmailService.cs",
+              "RelativeToolTip": "GP\\Services\\IEmailService.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAowAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T13:30:10.865Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ResetPasswordModel.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Auth\\ResetPasswordModel.cs",
+              "RelativeDocumentMoniker": "GP\\DTOs\\Auth\\ResetPasswordModel.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Auth\\ResetPasswordModel.cs",
+              "RelativeToolTip": "GP\\DTOs\\Auth\\ResetPasswordModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T13:28:54.77Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Program.cs",
+              "RelativeDocumentMoniker": "GP\\Program.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Program.cs",
+              "RelativeToolTip": "GP\\Program.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAAAFEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T12:59:45.931Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "ForgotPasswordModel.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Auth\\ForgotPasswordModel.cs",
+              "RelativeDocumentMoniker": "GP\\DTOs\\Auth\\ForgotPasswordModel.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Auth\\ForgotPasswordModel.cs",
+              "RelativeToolTip": "GP\\DTOs\\Auth\\ForgotPasswordModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T13:29:13.863Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "EmailSettings.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Models\\EmailSettings.cs",
+              "RelativeDocumentMoniker": "GP\\Models\\EmailSettings.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Models\\EmailSettings.cs",
+              "RelativeToolTip": "GP\\Models\\EmailSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T13:31:20.944Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "UpdateAnimalDto.cs",
+              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Animal\\UpdateAnimalDto.cs",
+              "RelativeDocumentMoniker": "GP\\DTOs\\Animal\\UpdateAnimalDto.cs",
+              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Animal\\UpdateAnimalDto.cs",
+              "RelativeToolTip": "GP\\DTOs\\Animal\\UpdateAnimalDto.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwAwAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T12:41:49.128Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
               "Title": "AppException.cs",
               "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Exceptions\\AppException.cs",
               "RelativeDocumentMoniker": "GP\\Exceptions\\AppException.cs",
@@ -561,7 +775,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 45,
               "Title": "ErrorResponse.cs",
               "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Models\\ErrorResponse.cs",
               "RelativeDocumentMoniker": "GP\\Models\\ErrorResponse.cs",
@@ -573,31 +787,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "GP\\Controllers\\AdminController.cs",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "GP\\Controllers\\AdminController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T12:14:00.054Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "GlobalExceptionHandlerMiddleware.cs",
-              "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Middleware\\GlobalExceptionHandlerMiddleware.cs",
-              "RelativeDocumentMoniker": "GP\\Middleware\\GlobalExceptionHandlerMiddleware.cs",
-              "ToolTip": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\Middleware\\GlobalExceptionHandlerMiddleware.cs",
-              "RelativeToolTip": "GP\\Middleware\\GlobalExceptionHandlerMiddleware.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T12:40:03.686Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 46,
               "Title": "RegisterModel.cs",
               "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Auth\\RegisterModel.cs",
               "RelativeDocumentMoniker": "GP\\DTOs\\Auth\\RegisterModel.cs",
@@ -609,7 +799,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 47,
               "Title": "DoctorRegisterModel.cs",
               "DocumentMoniker": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\DTOs\\Auth\\DoctorRegisterModel.cs",
               "RelativeDocumentMoniker": "GP\\DTOs\\Auth\\DoctorRegisterModel.cs",

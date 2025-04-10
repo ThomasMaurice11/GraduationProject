@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9KWb8MgVOTbzuAsH/mZKx51x5E5SDH7NXkK8TiBunko=",
+  "Hash": "HtSOUi/j92ytexVexqMqkgG8zgNLTa0zHwcwWiBK/xQ=",
   "Source": "GP",
   "BasePath": "_content/GP",
   "Mode": "Default",
@@ -267,6 +267,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\6c04d396-5f95-4e53-8d73-cc0c52341d45.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\wwwroot\\images\\76362950-6538-44b2-9711-6e73c3595611.webp",
+      "SourceId": "GP",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\wwwroot\\",
+      "BasePath": "_content/GP",
+      "RelativePath": "images/76362950-6538-44b2-9711-6e73c3595611#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "826o9igw9q",
+      "Integrity": "UJq+IVVYmUqcjuRLEmUOLE3nlaO55ED9hmgYL+HM/KU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\76362950-6538-44b2-9711-6e73c3595611.webp"
     },
     {
       "Identity": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\wwwroot\\images\\80a10d15-2bdc-4de8-aba0-5b1498c16f10.jpg",
@@ -1587,6 +1608,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-dcmj8/New9WkhnM3TrjueX4MTrHUKoA7lv5fiNeZ1vw="
+        }
+      ]
+    },
+    {
+      "Route": "images/76362950-6538-44b2-9711-6e73c3595611.826o9igw9q.webp",
+      "AssetFile": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\wwwroot\\images\\76362950-6538-44b2-9711-6e73c3595611.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "100478"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UJq+IVVYmUqcjuRLEmUOLE3nlaO55ED9hmgYL+HM/KU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 17:49:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "826o9igw9q"
+        },
+        {
+          "Name": "label",
+          "Value": "images/76362950-6538-44b2-9711-6e73c3595611.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-UJq+IVVYmUqcjuRLEmUOLE3nlaO55ED9hmgYL+HM/KU="
+        }
+      ]
+    },
+    {
+      "Route": "images/76362950-6538-44b2-9711-6e73c3595611.webp",
+      "AssetFile": "C:\\Users\\thoma\\source\\repos\\GP\\GP\\wwwroot\\images\\76362950-6538-44b2-9711-6e73c3595611.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "100478"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UJq+IVVYmUqcjuRLEmUOLE3nlaO55ED9hmgYL+HM/KU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 17:49:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-UJq+IVVYmUqcjuRLEmUOLE3nlaO55ED9hmgYL+HM/KU="
         }
       ]
     },

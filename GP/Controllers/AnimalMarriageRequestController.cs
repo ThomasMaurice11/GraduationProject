@@ -1,22 +1,22 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using GP.Models;
-using System.Linq;
-using System.Threading.Tasks;
-using GP.DTOs;
+﻿using GP.DTOs.Pet;
 using GP.DTOs.PetMarriageRequest;
-using GP.DTOs.Pet;
+using GP.DTOs;
 using GP.Exceptions;
+using GP.Models;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using GP.DTOs.AnimalMarriageRequest;
 
 namespace GP.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PetMarriageRequestController : ControllerBase
+    public class AnimalMarriageRequestController : ControllerBase
     {
         private readonly AuthDbContext _context;
 
-        public PetMarriageRequestController(AuthDbContext context)
+        public AnimalMarriageRequestController(AuthDbContext context)
         {
             _context = context;
         }
@@ -26,18 +26,16 @@ namespace GP.Controllers
         {
             try
             {
-                var requests = await _context.PetMarriageRequests
+                var requests = await _context.AnimalMarriageRequests
                     .Include(r => r.SenderPet)
                         .ThenInclude(p => p.Owner)
                     .Include(r => r.SenderPet)
                         .ThenInclude(p => p.Photos)
-                    .Include(r => r.ReceiverPet)
-                        .ThenInclude(p => p.Owner)
-                    .Include(r => r.ReceiverPet)
+                    .Include(r => r.ReceiverAnimal)
                         .ThenInclude(p => p.Photos)
                     .ToListAsync();
 
-                var result = requests.Select(r => MapToGetPetMarriageRequestDto(r)).ToList();
+                var result = requests.Select(r => MapToGetAnimalMarriageRequestDto(r)).ToList();
 
                 return Ok(result);
             }
@@ -52,19 +50,17 @@ namespace GP.Controllers
         {
             try
             {
-                var myRequests = await _context.PetMarriageRequests
+                var myRequests = await _context.AnimalMarriageRequests
                     .Include(r => r.SenderPet)
                         .ThenInclude(p => p.Owner)
                     .Include(r => r.SenderPet)
                         .ThenInclude(p => p.Photos)
-                    .Include(r => r.ReceiverPet)
-                        .ThenInclude(p => p.Owner)
-                    .Include(r => r.ReceiverPet)
+                    .Include(r => r.ReceiverAnimal)
                         .ThenInclude(p => p.Photos)
-                    .Where(r => r.ReceiverPetId == receiverId)
+                    .Where(r => r.ReceiverAnimalId == receiverId)
                     .ToListAsync();
 
-                var result = myRequests.Select(r => MapToGetPetMarriageRequestDto(r)).ToList();
+                var result = myRequests.Select(r => MapToGetAnimalMarriageRequestDto(r)).ToList();
 
                 if (!result.Any())
                     throw new AppException("No requests found for this receiver ID.", 404, "Not Found");
@@ -78,7 +74,7 @@ namespace GP.Controllers
         }
 
         [HttpPost("MakeMarriageRequest")]
-        public async Task<IActionResult> MakeRequest(PetMarriageRequestDto requestDto)
+        public async Task<IActionResult> MakeRequest(AnimalMarriageRequestDto requestDto)
         {
             try
             {
@@ -86,18 +82,18 @@ namespace GP.Controllers
                     throw new AppException("Invalid request data", 400, "Bad Request");
 
                 var senderExists = await _context.Pets.AnyAsync(p => p.PetId == requestDto.SenderPetId);
-                var receiverExists = await _context.Pets.AnyAsync(p => p.PetId == requestDto.ReceiverPetId);
+                var receiverExists = await _context.Animals.AnyAsync(p => p.AnimalId == requestDto.ReceiverAnimalId);
 
                 if (!senderExists || !receiverExists)
                     throw new AppException("Sender or Receiver Pet does not exist", 404, "Not Found");
 
-                var request = new PetMarriageRequest
+                var request = new AnimalMarriageRequest
                 {
                     SenderPetId = requestDto.SenderPetId,
-                    ReceiverPetId = requestDto.ReceiverPetId,
+                    ReceiverAnimalId = requestDto.ReceiverAnimalId,
                 };
 
-                _context.PetMarriageRequests.Add(request);
+                _context.AnimalMarriageRequests.Add(request);
                 await _context.SaveChangesAsync();
 
                 return Ok("Marriage request sent successfully.");
@@ -113,7 +109,7 @@ namespace GP.Controllers
         {
             try
             {
-                var request = await _context.PetMarriageRequests.FindAsync(id);
+                var request = await _context.AnimalMarriageRequests.FindAsync(id);
                 if (request == null)
                     throw new AppException("Request not found.", 404, "Not Found");
 
@@ -132,7 +128,7 @@ namespace GP.Controllers
         {
             try
             {
-                var request = await _context.PetMarriageRequests.FindAsync(id);
+                var request = await _context.AnimalMarriageRequests.FindAsync(id);
                 if (request == null)
                     throw new AppException("Request not found.", 404, "Not Found");
 
@@ -146,9 +142,9 @@ namespace GP.Controllers
             }
         }
 
-        private GetPetMarriageRequestDto MapToGetPetMarriageRequestDto(PetMarriageRequest request)
+        private GetAnimalMarriageRequestDto MapToGetAnimalMarriageRequestDto(AnimalMarriageRequest request)
         {
-            return new GetPetMarriageRequestDto
+            return new GetAnimalMarriageRequestDto
             {
                 RequestId = request.RequestId,
                 SenderPet = new PetResponseDto
@@ -167,21 +163,16 @@ namespace GP.Controllers
                         UserName = request.SenderPet.Owner.UserName
                     }
                 },
-                ReceiverPet = new PetResponseDto
+                ReceiverAnimal = new AnimalResponseDto
                 {
-                    PetId = request.ReceiverPet.PetId,
-                    Name = request.ReceiverPet.Name,
-                    Age = request.ReceiverPet.Age,
-                    Breed = request.ReceiverPet.Breed,
-                    Gender = request.ReceiverPet.Gender,
-                    HealthIssues = request.ReceiverPet.HealthIssues,
-                    UserId = request.ReceiverPet.UserId,
-                    PhotoUrls = request.ReceiverPet.Photos.Select(p => p.ImageUrl).ToList(),
-                    Owner = new OwnerDto
-                    {
-                        Id = request.ReceiverPet.Owner.Id,
-                        UserName = request.ReceiverPet.Owner.UserName
-                    }
+                    AnimalId = request.ReceiverAnimal.AnimalId,
+                    //Name = request.ReceiverPet.Name,
+                    Age = request.ReceiverAnimal.Age,
+                    //Breed = request.ReceiverAnimal.Breed,
+                    Gender = request.ReceiverAnimal.Gender,
+                    //HealthStatus = request.ReceiverAnimal.HealthStatus,
+                    //UserId = request.ReceiverPet.UserId,
+                    PhotoUrls = request.ReceiverAnimal.Photos.Select(p => p.ImageUrl).ToList()
                 },
                 Status = request.Status,
                 RequestedAt = request.RequestedAt

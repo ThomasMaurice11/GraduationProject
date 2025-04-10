@@ -12,12 +12,13 @@ namespace GP.DTOs.Pet
 
    
         public string Breed { get; set; }
-        public string Title { get; set; }  
-
+        public string Title { get; set; }
+        public string HealthIssues { get; set; }  // Changed from HealthStatus
+        public string Description { get; set; }  // New field
         public string Gender { get; set; }
 
      
-        public string HealthStatus { get; set; }
+        
 
 
         public List<IFormFile> Photos { get; set; }

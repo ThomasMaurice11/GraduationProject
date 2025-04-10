@@ -13,6 +13,7 @@ namespace GP
         public DbSet<Pet> Pets { get; set; }
         public DbSet<Photo> Photos { get; set; }
         public DbSet<PetMarriageRequest> PetMarriageRequests { get; set; }
+        public DbSet<AnimalMarriageRequest> AnimalMarriageRequests { get; set; }
         public DbSet<AdoptionRequest> AdoptionRequests { get; set; }
         public DbSet<Doctor> Doctors { get; set; }
         public DbSet<Clinic> Clinics { get; set; }
@@ -39,17 +40,29 @@ namespace GP
          .HasForeignKey(p => p.SenderPetId)
          .OnDelete(DeleteBehavior.NoAction);  // Prevent cascade delete
 
-       //     modelBuilder.Entity<Clinic>()
-       //.HasOne(c => c.Doctor)
-       //.WithMany()
-       //.HasForeignKey(c => c.DoctorId)
-       //.OnDelete(DeleteBehavior.NoAction); // Optional: Configure delete behavior
+            modelBuilder.Entity<AnimalMarriageRequest>()
+      .HasOne(p => p.SenderPet)
+      .WithMany()
+      .HasForeignKey(p => p.SenderPetId)
+      .OnDelete(DeleteBehavior.NoAction);  // Prevent cascade delete
+
+            //     modelBuilder.Entity<Clinic>()
+            //.HasOne(c => c.Doctor)
+            //.WithMany()
+            //.HasForeignKey(c => c.DoctorId)
+            //.OnDelete(DeleteBehavior.NoAction); // Optional: Configure delete behavior
 
             modelBuilder.Entity<PetMarriageRequest>()
                 .HasOne(p => p.ReceiverPet)
                 .WithMany()
                 .HasForeignKey(p => p.ReceiverPetId)
                 .OnDelete(DeleteBehavior.NoAction);  // Prevent cascade delete
+
+            modelBuilder.Entity<AnimalMarriageRequest>()
+         .HasOne(p => p.ReceiverAnimal)
+         .WithMany()
+         .HasForeignKey(p => p.ReceiverAnimalId)
+         .OnDelete(DeleteBehavior.NoAction);  // Prevent cascade delete
 
             //modelBuilder.Entity<AdoptionRequest>()
             //    .HasOne(p => p.PetId)

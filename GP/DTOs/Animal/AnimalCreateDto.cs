@@ -9,7 +9,7 @@ public class AnimalCreateDto
 
     public int Age { get; set; }
     public string FoundDate { get; set; }
-    public DateTime CreationDate { get; set; }
+    //public DateTime CreationDate { get; set; }
     public string Gender { get; set; }
 
     public string? HealthIssues { get; set; }

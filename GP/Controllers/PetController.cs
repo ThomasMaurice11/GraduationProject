@@ -57,7 +57,8 @@ public class PetController : ControllerBase
                 Age = petDto.Age,
                 Breed = petDto.Breed,
                 Gender = petDto.Gender,
-                HealthStatus = petDto.HealthStatus,
+                HealthIssues = petDto.HealthIssues,
+                Description = petDto.Description,
                 UserId = userId,
             };
 
@@ -175,7 +176,8 @@ public class PetController : ControllerBase
             pet.Age = petDto.Age;
             pet.Breed = petDto.Breed;
             pet.Gender = petDto.Gender;
-            pet.HealthStatus = petDto.HealthStatus;
+            pet.HealthIssues = petDto.HealthIssues;
+            pet.Description = petDto.Description;
 
             if (petDto.Photos != null && petDto.Photos.Count > 0)
             {
@@ -255,7 +257,8 @@ public class PetController : ControllerBase
             Age = pet.Age,
             Breed = pet.Breed,
             Gender = pet.Gender,
-            HealthStatus = pet.HealthStatus,
+            HealthIssues = pet.HealthIssues,
+            Description = pet.Description,
             UserId = pet.UserId,
             PhotoUrls = pet.Photos.Select(p => p.ImageUrl).ToList(),
             Owner = pet.Owner != null ? new OwnerDto

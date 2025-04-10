@@ -294,6 +294,80 @@
     ]
   },
   {
+    "ContainingType": "GP.Controllers.AnimalMarriageRequestController",
+    "Method": "GetRequests",
+    "RelativePath": "api/AnimalMarriageRequest",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GP.Controllers.AnimalMarriageRequestController",
+    "Method": "AcceptRequest",
+    "RelativePath": "api/AnimalMarriageRequest/AcceptMarriageRequest/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GP.Controllers.AnimalMarriageRequestController",
+    "Method": "MakeRequest",
+    "RelativePath": "api/AnimalMarriageRequest/MakeMarriageRequest",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requestDto",
+        "Type": "GP.DTOs.AnimalMarriageRequest.AnimalMarriageRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GP.Controllers.AnimalMarriageRequestController",
+    "Method": "GetMyRequests",
+    "RelativePath": "api/AnimalMarriageRequest/MyRequests/{receiverId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "receiverId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "GP.Controllers.AnimalMarriageRequestController",
+    "Method": "RejectRequest",
+    "RelativePath": "api/AnimalMarriageRequest/RejectMarriageRequest/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AnimalsController",
     "Method": "CreateAnimal",
     "RelativePath": "api/Animals",
@@ -319,11 +393,6 @@
       {
         "Name": "FoundDate",
         "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "CreationDate",
-        "Type": "System.DateTime",
         "IsRequired": false
       },
       {
@@ -636,7 +705,17 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "GP.DTOs.Clinic.GetClinicDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "GP.Controllers.ClinicController",
@@ -745,17 +824,22 @@
         "IsRequired": false
       },
       {
+        "Name": "HealthIssues",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
         "Name": "Breed",
         "Type": "System.String",
         "IsRequired": false
       },
       {
         "Name": "Gender",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "HealthStatus",
         "Type": "System.String",
         "IsRequired": false
       },
@@ -817,12 +901,17 @@
         "IsRequired": false
       },
       {
-        "Name": "Gender",
+        "Name": "HealthIssues",
         "Type": "System.String",
         "IsRequired": false
       },
       {
-        "Name": "HealthStatus",
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Gender",
         "Type": "System.String",
         "IsRequired": false
       },

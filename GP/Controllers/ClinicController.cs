@@ -88,7 +88,7 @@ namespace GP.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> AddClinic(AddClinicDto addClinic)
+        public async Task<ActionResult<GetClinicDto>> AddClinic(AddClinicDto addClinic)
         {
             if (addClinic == null)
                 throw new AppException("Clinic data must be provided", 400, "Bad Request");
@@ -111,7 +111,15 @@ namespace GP.Controllers
             _context.Clinics.Add(clinic);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetClinic), new { id = clinic.ClinicId }, MapToGetClinicDto(clinic));
+            // Retrieve the clinic with doctor info after saving
+            var createdClinic = await _context.Clinics
+                .Include(c => c.Doctor)
+                .FirstOrDefaultAsync(c => c.ClinicId == clinic.ClinicId);
+
+            if (createdClinic == null)
+                throw new AppException($"Clinic with ID {clinic.ClinicId} not found after creation", 500, "Internal Server Error");
+
+            return CreatedAtAction(nameof(GetClinic), new { id = createdClinic.ClinicId }, MapToGetClinicDto(createdClinic));
         }
 
         [HttpPut("{id}")]
