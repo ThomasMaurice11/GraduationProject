@@ -85,7 +85,9 @@ builder.Services.AddScoped<JwtTokenService>();
 builder.Services.AddTransient<IEmailService, EmailService>();
 //builder.Services.AddScoped<AnimalRepository>();
 //builder.Services.AddScoped<AnimalService>();
-
+//builder.Services.AddHttpClient<DiseasePredictionService>();
+//builder.Services.Configure<DiseasePredictionApiSettings>(
+//    builder.Configuration.GetSection("DiseasePredictionApi"));
 
 
 
@@ -136,7 +138,7 @@ builder.Services.AddSwaggerGen(options =>
 //});
 
 
-// Add CORS policy to allow all origins
+//// Add CORS policy to allow all origins
 //builder.Services.AddCors(options =>
 //{
 //    options.AddPolicy("AllowAll", policy =>
@@ -160,16 +162,40 @@ builder.Services.AddSwaggerGen(options =>
 //});
 
 
+//builder.Services.AddCors(options =>
+//{
+//    options.AddPolicy("AllowReactApp", policy =>
+//    {
+//        policy.WithOrigins("http://localhost:3000") // Allow requests from this origin
+//              .AllowAnyHeader()
+//              .AllowAnyMethod()
+//              .AllowCredentials(); // Allow credentials (e.g., cookies, authorization headers)
+//    });
+//});
+//builder.Services.AddCors(options =>
+//{
+//    options.AddPolicy("AllowAll", policy =>
+//    {
+//        policy
+//            .AllowAnyOrigin()
+//            .AllowAnyHeader()
+//            .AllowAnyMethod();
+//    });
+//});
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReactApp", policy =>
     {
-        policy.WithOrigins("http://localhost:3000") // Allow requests from this origin
-              .AllowAnyHeader()
-              .AllowAnyMethod()
-              .AllowCredentials(); // Allow credentials (e.g., cookies, authorization headers)
+        policy
+            .SetIsOriginAllowed(origin => new Uri(origin).Host == "localhost") // allow localhost with any port
+            .AllowAnyHeader()
+            .AllowAnyMethod()
+            .AllowCredentials();
     });
 });
+
+
 
 builder.Services.AddSignalR();
 var app = builder.Build();
