@@ -1,0 +1,20 @@
+# Ignore Visual Studio temporary files, build results, and user files
+.vs/
+*.user
+*.suo
+*.db
+*.cache
+*.log
+
+# Build output
+bin/
+obj/
+
+# Other
+*.pdb
+*.mdb
+*.bak
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,193 @@
+# version: '3.8'
+
+# services:
+#   app:
+#     build:
+#       context: .
+#       dockerfile: Dockerfile
+#     ports:
+#       - "5000:8080"
+#     environment:
+#       - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=YourDatabase;User Id=sa;Password=YourStrong!Password;
+#     depends_on:
+#       - sqlserver
+
+#   sqlserver:
+#     image: mcr.microsoft.com/mssql/server:2022-latest
+#     container_name: sqlserver
+#     environment:
+#       SA_PASSWORD: "YourStrong!Password"
+#       ACCEPT_EULA: "Y"
+#     ports:
+#       - "1433:1433"
+#     restart: always
+#     volumes:
+#       - sqlserver_data:/var/opt/mssql
+
+# volumes:
+#   sqlserver_data:
+
+
+# version: '3.8'
+
+# services:
+#   app:
+#     build:
+#       context: .
+#       dockerfile: Dockerfile
+#     ports:
+#       - "5000:8080"
+#     environment:
+#       - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=YourDatabase;User Id=sa;Password=YourStrong!Password;TrustServerCertificate=True;
+#     depends_on:
+#       - sqlserver
+
+#   sqlserver:
+#     image: mcr.microsoft.com/mssql/server:2022-latest
+#     container_name: sqlserver
+#     environment:
+#       SA_PASSWORD: "YourStrong!Password"
+#       ACCEPT_EULA: "Y"
+#     ports:
+#       - "1433:1433"
+#     restart: always
+#     volumes:
+#       - sqlserver_data:/var/opt/mssql
+
+# volumes:
+#   sqlserver_data:
+
+
+# version: '3.8'
+# services:
+#   sqlserver:
+#     image: mcr.microsoft.com/mssql/server:2022-latest
+#     container_name: sqlserver
+#     ports:
+#       - "1433:1433"
+#     environment:
+#       SA_PASSWORD: "YourStrong!Passw0rd"
+#       ACCEPT_EULA: "Y"
+#       MSSQL_PID: "Developer"
+#       MSSQL_DATABASE: "YourDatabase"  This helps some images create the DB
+#     volumes:
+#       - sqlserver_data:/var/opt/mssql
+#     restart: always
+
+#   app:
+#     build: .
+#     depends_on:
+#       - sqlserver
+#     environment:
+#       ConnectionStrings__DefaultConnection: "Server=sqlserver,1433;Database=YourDatabase;User Id=sa;Password=YourStrong!Passw0rd;"
+
+# volumes:
+#   sqlserver_data:
+
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "5000:8080"
+      - "5001:443"
+    depends_on:
+      - sql_server
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=sql_server;Database=GPDb;User Id=sa;Password=your_strong_password_123;TrustServerCertificate=true;
+
+  sql_server:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=your_strong_password_123
+      - MSSQL_PID=Express
+    ports:
+      - "1433:1433"
+    volumes:
+      - sql_data:/var/opt/mssql
+
+volumes:
+  sql_data:
+  
+    
+
+
+# version: '3.8'
+
+# services:
+#   web:
+#     build: .
+#     ports:
+#       - "5000:8080"
+#       - "5001:443"
+#     depends_on:
+#       - sql_server
+#       - ml_service
+#     environment:
+#       - ASPNETCORE_ENVIRONMENT=Development
+#       - ConnectionStrings__DefaultConnection=Server=sql_server;Database=GPDb;User Id=sa;Password=your_strong_password_123;TrustServerCertificate=true;
+
+#   ml_service:
+#     build:
+#       context: .
+#       dockerfile: Dockerfile.ml
+#     ports:
+#       - "8000:8000"
+#     volumes:
+#       - ./ml_folder:/app/ml_folder  Adjust this path to your ML folder
+
+#   sql_server:
+#     image: mcr.microsoft.com/mssql/server:2022-latest
+#     environment:
+#       - ACCEPT_EULA=Y
+#       - SA_PASSWORD=your_strong_password_123
+#       - MSSQL_PID=Express
+#     ports:
+#       - "1433:1433"
+#     volumes:
+#       - sql_data:/var/opt/mssql
+
+# volumes:
+#   sql_data:
+  
+
+# version: '3.8'
+
+# services:
+#   web:
+#     build: .
+#     ports:
+#       - "5000:8080"
+#       - "5001:443"
+#     depends_on:
+#       - sql_server
+#       - ml_service
+#     environment:
+#       - ASPNETCORE_ENVIRONMENT=Development
+#       - ConnectionStrings__DefaultConnection=Server=sql_server;Database=GPDb;User Id=sa;Password=your_strong_password_123;TrustServerCertificate=true;
+
+#   ml_service:
+#     build:
+#       context: .
+#       dockerfile: Dockerfile.ml
+#     ports:
+#       - "8000:8000"
+#     volumes:
+#       - ./Machine:/app  Hot-reload for development
+
+#   sql_server:
+#     image: mcr.microsoft.com/mssql/server:2022-latest
+#     environment:
+#       - ACCEPT_EULA=Y
+#       - SA_PASSWORD=your_strong_password_123
+#       - MSSQL_PID=Express
+#     ports:
+#       - "1433:1433"
+#     volumes:
+#       - sql_data:/var/opt/mssql
+
+# volumes:
+#   sql_data:
