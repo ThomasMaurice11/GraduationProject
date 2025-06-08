@@ -195,22 +195,9 @@ builder.Services.AddCors(options =>
     });
 });
 
-<<<<<<< HEAD
-=======
-//builder.Services.AddCors(options =>
-//{
-//    options.AddPolicy("AllowMobile", policy =>
-//    {
-//        policy
-//            .AllowAnyOrigin() // Use for testing only. Replace with specific origins later
-//            .AllowAnyHeader()
-//            .AllowAnyMethod()
-//            .AllowCredentials();
-//    });
-//});
 
 
->>>>>>> bbfbb4e (Doctor Modifications)
+
 
 
 builder.Services.AddSignalR();
