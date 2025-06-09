@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GP.Migrations
 {
     [DbContext(typeof(AuthDbContext))]
-    [Migration("20250609111351_MarriageAdoption")]
-    partial class MarriageAdoption
+    [Migration("20250609225521_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -257,9 +257,6 @@ namespace GP.Migrations
                     b.Property<int>("SlotId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("SlotId1")
-                        .HasColumnType("int");
-
                     b.Property<string>("UserId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
@@ -269,8 +266,6 @@ namespace GP.Migrations
                     b.HasIndex("ClinicId");
 
                     b.HasIndex("SlotId");
-
-                    b.HasIndex("SlotId1");
 
                     b.HasIndex("UserId");
 
@@ -870,14 +865,10 @@ namespace GP.Migrations
                         .IsRequired();
 
                     b.HasOne("GP.Models.Slot", "Slot")
-                        .WithMany()
+                        .WithMany("Appointments")
                         .HasForeignKey("SlotId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
-
-                    b.HasOne("GP.Models.Slot", null)
-                        .WithMany("Appointments")
-                        .HasForeignKey("SlotId1");
 
                     b.HasOne("GP.Models.ApplicationUser", "User")
                         .WithMany()

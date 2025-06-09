@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace GP.Migrations
 {
     /// <inheritdoc />
-    public partial class MarriageAdoption : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -544,8 +544,7 @@ namespace GP.Migrations
                     PetName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Breed = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PetType = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ReasonForVisit = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    SlotId1 = table.Column<int>(type: "int", nullable: true)
+                    ReasonForVisit = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -564,11 +563,6 @@ namespace GP.Migrations
                     table.ForeignKey(
                         name: "FK_Appointments_Slots_SlotId",
                         column: x => x.SlotId,
-                        principalTable: "Slots",
-                        principalColumn: "SlotId");
-                    table.ForeignKey(
-                        name: "FK_Appointments_Slots_SlotId1",
-                        column: x => x.SlotId1,
                         principalTable: "Slots",
                         principalColumn: "SlotId");
                 });
@@ -607,11 +601,6 @@ namespace GP.Migrations
                 name: "IX_Appointments_SlotId",
                 table: "Appointments",
                 column: "SlotId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Appointments_SlotId1",
-                table: "Appointments",
-                column: "SlotId1");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Appointments_UserId",

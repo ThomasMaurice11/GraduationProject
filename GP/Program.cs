@@ -199,22 +199,7 @@ builder.Services.AddCors(options =>
     });
 });
 
-
-
-//builder.Services.AddCors(options =>
-//{
-//    options.AddPolicy("AllowMobile", policy =>
-//    {
-//        policy
-//            .AllowAnyOrigin() // Use for testing only. Replace with specific origins later
-//            .AllowAnyHeader()
-//            .AllowAnyMethod()
-//            .AllowCredentials();
-//    });
-//});
-
-
-
+      
 
 
 builder.Services.AddSignalR();
