@@ -16,9 +16,13 @@ namespace GP.DTOs.Pet
         public string HealthIssues { get; set; }  // Changed from HealthStatus
         public string Description { get; set; }  // New field
         public string Gender { get; set; }
+        [Required]
+        public int Adoption { get; set; } 
+        [Required]
+        public int Marriage { get; set; } 
 
-     
-        
+
+
 
 
         public List<IFormFile> Photos { get; set; }

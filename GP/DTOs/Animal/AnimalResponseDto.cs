@@ -1,6 +1,7 @@
 ﻿using DocumentFormat.OpenXml.Drawing.Diagrams;
 using DocumentFormat.OpenXml.Wordprocessing;
 using Microsoft.SqlServer.Server;
+using System.ComponentModel.DataAnnotations;
 
 public class AnimalResponseDto
 {
@@ -14,4 +15,9 @@ public class AnimalResponseDto
     public int Age { get; set; }
     public string Gender { get; set; }
     public string HealthIssues { get; set; }
+
+    
+    public int Adoption { get; set; } 
+
+    public int Marriage { get; set; } 
 }

@@ -166,6 +166,7 @@ public class AuthController : ControllerBase
             user.Id,
             user.UserName,
             user.Email,
+            user.PhoneNumber,
             Roles = roles
         });
     }
@@ -192,6 +193,7 @@ public class AuthController : ControllerBase
             user.Id,
             user.UserName,
             user.Email,
+            user.PhoneNumber,
             Roles = roles
         });
     }

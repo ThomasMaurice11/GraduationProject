@@ -14,7 +14,7 @@ namespace GP.Models
         public int ClinicId { get; set; }
 
         [ForeignKey("ClinicId")]
-        [DeleteBehavior(DeleteBehavior.NoAction)] // Changed from Cascade
+       
         public Clinic Clinic { get; set; }
 
         [Required]
@@ -28,7 +28,7 @@ namespace GP.Models
 
         [ForeignKey("SlotId")]
         //[DeleteBehavior(DeleteBehavior.NoAction)] // Changed from Cascade
-        [DeleteBehavior(DeleteBehavior.Cascade)]
+        
         public Slot Slot { get; set; }
 
         [DataType(DataType.Date)]

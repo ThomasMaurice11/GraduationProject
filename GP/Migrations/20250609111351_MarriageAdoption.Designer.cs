@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GP.Migrations
 {
     [DbContext(typeof(AuthDbContext))]
-    [Migration("20250605213336_SlotsDelete")]
-    partial class SlotsDelete
+    [Migration("20250609111351_MarriageAdoption")]
+    partial class MarriageAdoption
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,6 +32,9 @@ namespace GP.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AnimalId"));
+
+                    b.Property<int>("Adoption")
+                        .HasColumnType("int");
 
                     b.Property<int>("Age")
                         .HasColumnType("int");
@@ -53,6 +56,9 @@ namespace GP.Migrations
 
                     b.Property<string>("HealthIssues")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Marriage")
+                        .HasColumnType("int");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -251,6 +257,9 @@ namespace GP.Migrations
                     b.Property<int>("SlotId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("SlotId1")
+                        .HasColumnType("int");
+
                     b.Property<string>("UserId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
@@ -260,6 +269,8 @@ namespace GP.Migrations
                     b.HasIndex("ClinicId");
 
                     b.HasIndex("SlotId");
+
+                    b.HasIndex("SlotId1");
 
                     b.HasIndex("UserId");
 
@@ -412,6 +423,9 @@ namespace GP.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PetId"));
 
+                    b.Property<int>("Adoption")
+                        .HasColumnType("int");
+
                     b.Property<int>("Age")
                         .HasColumnType("int");
 
@@ -430,6 +444,9 @@ namespace GP.Migrations
                     b.Property<string>("HealthIssues")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Marriage")
+                        .HasColumnType("int");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -624,6 +641,12 @@ namespace GP.Migrations
 
                     b.Property<int>("ClinicId")
                         .HasColumnType("int");
+
+                    b.Property<bool>("Disabled")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("DisabledDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<TimeSpan>("EndTime")
                         .HasColumnType("time");
@@ -851,6 +874,10 @@ namespace GP.Migrations
                         .HasForeignKey("SlotId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
+
+                    b.HasOne("GP.Models.Slot", null)
+                        .WithMany("Appointments")
+                        .HasForeignKey("SlotId1");
 
                     b.HasOne("GP.Models.ApplicationUser", "User")
                         .WithMany()
@@ -1100,6 +1127,11 @@ namespace GP.Migrations
             modelBuilder.Entity("GP.Models.Post", b =>
                 {
                     b.Navigation("Photos");
+                });
+
+            modelBuilder.Entity("GP.Models.Slot", b =>
+                {
+                    b.Navigation("Appointments");
                 });
 
             modelBuilder.Entity("GP.Models.Doctor", b =>

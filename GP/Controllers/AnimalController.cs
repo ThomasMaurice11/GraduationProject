@@ -33,6 +33,8 @@ public class AnimalsController : ControllerBase
                 Gender = animalDto.Gender,
                 HealthIssues = animalDto.HealthIssues,
                 FoundDate = animalDto.FoundDate,
+                Adoption = animalDto.Adoption,
+                Marriage = animalDto.Marriage,
                 CreationDate = DateTime.UtcNow // Set creation date to current UTC time
             };
 
@@ -134,7 +136,10 @@ public class AnimalsController : ControllerBase
             HealthIssues = animal.HealthIssues,
             FoundDate = animal.FoundDate,
             CreationDate = animal.CreationDate,
-            PhotoUrls = animal.Photos.Select(p => p.ImageUrl).ToList()
+            PhotoUrls = animal.Photos.Select(p => p.ImageUrl).ToList(),
+            Marriage = animal.Marriage,
+            Adoption = animal.Adoption
+
         };
     }
 }

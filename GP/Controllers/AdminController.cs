@@ -5,6 +5,7 @@ using GP.Models;
 using GP.DTOs.Admin;
 using GP.DTOs.Clinic;
 using GP.Exceptions;
+using Microsoft.AspNetCore.Authorization;
 
 namespace GP.Controllers
 {
@@ -106,8 +107,8 @@ namespace GP.Controllers
 
 
         // New endpoint to get pending clinics (admin only)
-        [HttpGet("Pending")]
-        //[Authorize(Roles = "Admin")]
+        [HttpGet("PendingCLinics")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<IEnumerable<GetClinicDto>>> GetPendingClinics()
         {
             var clinics = await _context.Clinics
@@ -119,8 +120,8 @@ namespace GP.Controllers
         }
 
         // New endpoint to accept a clinic (admin only)
-        [HttpPut("{id}/Accept")]
-        //[Authorize(Roles = "Admin")]
+        [HttpPut("{id}/AcceptClinics")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> AcceptClinic(int id)
         {
             var clinic = await _context.Clinics.FindAsync(id);
@@ -135,7 +136,7 @@ namespace GP.Controllers
         }
 
         // New endpoint to reject a clinic (admin only)
-        [HttpPut("{id}/Reject")]
+        [HttpPut("{id}/RejectClinics")]
         //[Authorize(Roles = "Admin")]
         public async Task<IActionResult> RejectClinic(int id)
         {

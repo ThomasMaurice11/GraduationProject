@@ -41,7 +41,8 @@ namespace GP.Controllers
                     {
                         Id = r.Owner.Id,
                         UserName = r.Owner.UserName,
-                        Email = r.Owner.Email
+                        Email = r.Owner.Email,
+                        PhoneNumber = r.Owner.PhoneNumber
                     },
                     PetId = r.PetId,
                     AnimalId = r.AnimalId,
@@ -76,7 +77,8 @@ namespace GP.Controllers
                 {
                     Id = adoptionRequest.Owner.Id,
                     UserName = adoptionRequest.Owner.UserName,
-                    Email = adoptionRequest.Owner.Email
+                    Email = adoptionRequest.Owner.Email,
+                     PhoneNumber = adoptionRequest.Owner.PhoneNumber
                 },
                 PetId = adoptionRequest.PetId,
                 AnimalId = adoptionRequest.AnimalId,
@@ -124,7 +126,9 @@ namespace GP.Controllers
                         {
                             Id = r.Pet.Owner.Id,
                             UserName = r.Pet.Owner.UserName,
-                            Email = r.Pet.Owner.Email
+                            Email = r.Pet.Owner.Email,
+                            PhoneNumber = r.Pet.Owner.PhoneNumber
+
                         }
                     } : null,
                     AnimalInfo = r.AnimalId.HasValue ? new AnimalResponseDto
@@ -220,7 +224,8 @@ namespace GP.Controllers
                     {
                         Id = r.Owner.Id,
                         UserName = r.Owner.UserName,
-                        Email = r.Owner.Email
+                        Email = r.Owner.Email,
+                        PhoneNumber = r.Owner.PhoneNumber
                     }
                 })
                 .ToListAsync();
@@ -250,7 +255,8 @@ namespace GP.Controllers
                     {
                         Id = r.Owner.Id,
                         UserName = r.Owner.UserName,
-                        Email = r.Owner.Email
+                        Email = r.Owner.Email,
+                        PhoneNumber = r.Owner.PhoneNumber
                     }
                 })
                 .ToListAsync();
@@ -285,7 +291,8 @@ namespace GP.Controllers
                     {
                         Id = r.Owner.Id,
                         UserName = r.Owner.UserName,
-                        Email = r.Owner.Email
+                        Email = r.Owner.Email,
+                        PhoneNumber = r.Owner.PhoneNumber
                     },
                     AnimalId = r.AnimalId,
                     AnimalInfo = r.AnimalId.HasValue ? new AnimalResponseDto
@@ -323,7 +330,8 @@ namespace GP.Controllers
                     {
                         Id = r.Owner.Id,
                         UserName = r.Owner.UserName,
-                        Email = r.Owner.Email
+                        Email = r.Owner.Email,
+                        PhoneNumber = r.Owner.PhoneNumber
                     },
                     AnimalId = r.AnimalId,
                     AnimalInfo = r.AnimalId.HasValue ? new AnimalResponseDto
@@ -361,7 +369,8 @@ namespace GP.Controllers
                     {
                         Id = r.Owner.Id,
                         UserName = r.Owner.UserName,
-                        Email = r.Owner.Email
+                        Email = r.Owner.Email,
+                        PhoneNumber = r.Owner.PhoneNumber
                     },
                     AnimalId = r.AnimalId,
                     AnimalInfo = r.AnimalId.HasValue ? new AnimalResponseDto

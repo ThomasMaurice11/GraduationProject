@@ -179,8 +179,93 @@ namespace GP.Controllers
 
                 return NoContent();
             }
+        // PATCH: api/PetSitterRequests/accept/5
+        [HttpPatch("accept/{id}")]
+        public async Task<IActionResult> AcceptPetSitterRequest(int id)
+        {
+            var petSitterRequest = await _context.PetSitterRequests.FindAsync(id);
+            if (petSitterRequest == null)
+            {
+                return NotFound();
+            }
 
-            private bool PetSitterRequestExists(int id)
+            // Check if request is already processed
+            if (petSitterRequest.Status != "Pending")
+            {
+                return BadRequest($"Request is already {petSitterRequest.Status}");
+            }
+
+            petSitterRequest.Status = "Accepted";
+            
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!PetSitterRequestExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return Ok(new
+            {
+                Message = "Pet sitter request accepted successfully",
+                RequestId = petSitterRequest.PetSitterRequestId,
+                Status = petSitterRequest.Status
+            });
+        }
+
+        // PATCH: api/PetSitterRequests/reject/5
+        [HttpPatch("reject/{id}")]
+        public async Task<IActionResult> RejectPetSitterRequest(int id)
+        {
+            var petSitterRequest = await _context.PetSitterRequests.FindAsync(id);
+            if (petSitterRequest == null)
+            {
+                return NotFound();
+            }
+
+            // Check if request is already processed
+            if (petSitterRequest.Status != "Pending")
+            {
+                return BadRequest($"Request is already {petSitterRequest.Status}");
+            }
+
+            petSitterRequest.Status = "Rejected";
+            
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!PetSitterRequestExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return Ok(new
+            {
+                Message = "Pet sitter request rejected successfully",
+                RequestId = petSitterRequest.PetSitterRequestId,
+                Status = petSitterRequest.Status
+            });
+        }
+
+        private bool PetSitterRequestExists(int id)
             {
                 return _context.PetSitterRequests.Any(e => e.PetSitterRequestId == id);
             }

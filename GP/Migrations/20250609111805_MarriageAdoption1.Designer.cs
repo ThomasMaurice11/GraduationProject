@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GP.Migrations
 {
     [DbContext(typeof(AuthDbContext))]
-    [Migration("20250605215226_AddSoftDeleteToSlot")]
-    partial class AddSoftDeleteToSlot
+    [Migration("20250609111805_MarriageAdoption1")]
+    partial class MarriageAdoption1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,6 +32,9 @@ namespace GP.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AnimalId"));
+
+                    b.Property<int>("Adoption")
+                        .HasColumnType("int");
 
                     b.Property<int>("Age")
                         .HasColumnType("int");
@@ -53,6 +56,9 @@ namespace GP.Migrations
 
                     b.Property<string>("HealthIssues")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Marriage")
+                        .HasColumnType("int");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -251,9 +257,6 @@ namespace GP.Migrations
                     b.Property<int>("SlotId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("SlotId1")
-                        .HasColumnType("int");
-
                     b.Property<string>("UserId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
@@ -263,8 +266,6 @@ namespace GP.Migrations
                     b.HasIndex("ClinicId");
 
                     b.HasIndex("SlotId");
-
-                    b.HasIndex("SlotId1");
 
                     b.HasIndex("UserId");
 
@@ -417,6 +418,9 @@ namespace GP.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PetId"));
 
+                    b.Property<int>("Adoption")
+                        .HasColumnType("int");
+
                     b.Property<int>("Age")
                         .HasColumnType("int");
 
@@ -435,6 +439,9 @@ namespace GP.Migrations
                     b.Property<string>("HealthIssues")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Marriage")
+                        .HasColumnType("int");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -858,14 +865,10 @@ namespace GP.Migrations
                         .IsRequired();
 
                     b.HasOne("GP.Models.Slot", "Slot")
-                        .WithMany()
+                        .WithMany("Appointments")
                         .HasForeignKey("SlotId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
-
-                    b.HasOne("GP.Models.Slot", null)
-                        .WithMany("Appointments")
-                        .HasForeignKey("SlotId1");
 
                     b.HasOne("GP.Models.ApplicationUser", "User")
                         .WithMany()

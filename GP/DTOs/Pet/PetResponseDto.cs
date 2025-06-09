@@ -1,4 +1,6 @@
-﻿namespace GP.DTOs.Pet
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace GP.DTOs.Pet
 {
     public class PetResponseDto
     {
@@ -12,6 +14,10 @@
         public string Description { get; set; }  
         
         public string UserId { get; set; }
+    
+        public int Adoption { get; set; } 
+       
+        public int Marriage { get; set; } 
         public List<string> PhotoUrls { get; set; }
         public OwnerDto Owner { get; set; }
     }

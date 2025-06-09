@@ -13,6 +13,11 @@ public class AnimalCreateDto
     public string Gender { get; set; }
 
     public string? HealthIssues { get; set; }
+  
+    public int Adoption { get; set; } = 0;
+  
+    public int Marriage { get; set; } = 0;
+
 
 
     public List<IFormFile> Photos { get; set; }

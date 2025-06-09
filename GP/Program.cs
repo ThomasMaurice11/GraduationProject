@@ -154,7 +154,7 @@ builder.Services.AddSwaggerGen(options =>
 //{
 //    options.AddPolicy("AllowSignalR", policy =>
 //    {
-//        policy.WithOrigins("http://localhost:3000") // Allow your frontend origin
+//        policy.WithOrigins("https://localhost:5173") // Allow your frontend origin
 //              .AllowAnyHeader()
 //              .AllowAnyMethod()
 //              .AllowCredentials(); // Required for SignalR
@@ -166,7 +166,7 @@ builder.Services.AddSwaggerGen(options =>
 //{
 //    options.AddPolicy("AllowReactApp", policy =>
 //    {
-//        policy.WithOrigins("http://localhost:3000") // Allow requests from this origin
+//        policy.WithOrigins("http://localhost:5173") // Allow requests from this origin
 //              .AllowAnyHeader()
 //              .AllowAnyMethod()
 //              .AllowCredentials(); // Allow credentials (e.g., cookies, authorization headers)
@@ -183,6 +183,10 @@ builder.Services.AddSwaggerGen(options =>
 //    });
 //});
 
+
+
+
+////////////////////
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReactApp", policy =>
@@ -195,8 +199,8 @@ builder.Services.AddCors(options =>
     });
 });
 
-<<<<<<< HEAD
-=======
+
+
 //builder.Services.AddCors(options =>
 //{
 //    options.AddPolicy("AllowMobile", policy =>
@@ -210,7 +214,7 @@ builder.Services.AddCors(options =>
 //});
 
 
->>>>>>> bbfbb4e (Doctor Modifications)
+
 
 
 builder.Services.AddSignalR();

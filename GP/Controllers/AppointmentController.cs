@@ -57,7 +57,9 @@ namespace GP.Controllers
                 User = new UserDto
                 {
                     Id = appointment.User?.Id ?? string.Empty,
-                    UserName = appointment.User?.UserName ?? string.Empty
+                    UserName = appointment.User?.UserName ?? string.Empty,
+                    PhoneNumber = appointment.User?.PhoneNumber ?? string.Empty,
+                    Email=appointment.User?.Email??string.Empty,
                 },
                 SlotId = appointment.SlotId,
                 Slot = new SlotDto

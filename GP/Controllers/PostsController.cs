@@ -227,7 +227,8 @@ namespace GP.Controllers
                 {
                     Id = p.Owner.Id,
                     UserName = p.Owner.UserName,
-                    Email = p.Owner.Email
+                    Email = p.Owner.Email,
+                    PhoneNumber=p.Owner.PhoneNumber
                 } : null
             }).ToList();
 

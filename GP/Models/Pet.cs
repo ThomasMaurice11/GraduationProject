@@ -31,6 +31,11 @@
             [ForeignKey("UserId")]
           public ApplicationUser Owner { get; set; }
 
+        [Required]
+        public int Adoption { get; set; } = 0;
+        [Required]
+        public int Marriage { get; set; } = 0;
+
         public ICollection<Photo> Photos { get; set; } = new List<Photo>();
 
        

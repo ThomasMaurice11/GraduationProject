@@ -12,15 +12,15 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GP.Migrations
 {
     [DbContext(typeof(AuthDbContext))]
-    [Migration("20250506125058_AppoitmentsEnhance")]
-    partial class AppoitmentsEnhance
+    [Migration("20250609122600_MarriageAdoption2")]
+    partial class MarriageAdoption2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.2")
+                .HasAnnotation("ProductVersion", "9.0.4")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -32,6 +32,9 @@ namespace GP.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AnimalId"));
+
+                    b.Property<int>("Adoption")
+                        .HasColumnType("int");
 
                     b.Property<int>("Age")
                         .HasColumnType("int");
@@ -53,6 +56,9 @@ namespace GP.Migrations
 
                     b.Property<string>("HealthIssues")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Marriage")
+                        .HasColumnType("int");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -412,6 +418,9 @@ namespace GP.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PetId"));
 
+                    b.Property<int>("Adoption")
+                        .HasColumnType("int");
+
                     b.Property<int>("Age")
                         .HasColumnType("int");
 
@@ -430,6 +439,9 @@ namespace GP.Migrations
                     b.Property<string>("HealthIssues")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Marriage")
+                        .HasColumnType("int");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -624,6 +636,12 @@ namespace GP.Migrations
 
                     b.Property<int>("ClinicId")
                         .HasColumnType("int");
+
+                    b.Property<bool>("Disabled")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("DisabledDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<TimeSpan>("EndTime")
                         .HasColumnType("time");
@@ -847,7 +865,7 @@ namespace GP.Migrations
                         .IsRequired();
 
                     b.HasOne("GP.Models.Slot", "Slot")
-                        .WithMany()
+                        .WithMany("Appointments")
                         .HasForeignKey("SlotId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
@@ -1100,6 +1118,11 @@ namespace GP.Migrations
             modelBuilder.Entity("GP.Models.Post", b =>
                 {
                     b.Navigation("Photos");
+                });
+
+            modelBuilder.Entity("GP.Models.Slot", b =>
+                {
+                    b.Navigation("Appointments");
                 });
 
             modelBuilder.Entity("GP.Models.Doctor", b =>

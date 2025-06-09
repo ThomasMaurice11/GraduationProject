@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Net;
+using GP.DTOs.Post;
 
 [Route("api/[controller]")]
 [ApiController]
@@ -60,6 +61,8 @@ public class PetController : ControllerBase
                 HealthIssues = petDto.HealthIssues,
                 Description = petDto.Description,
                 UserId = userId,
+                Marriage=petDto.Marriage,
+                Adoption =petDto.Adoption
             };
 
             _context.Pets.Add(pet);
@@ -178,6 +181,8 @@ public class PetController : ControllerBase
             pet.Gender = petDto.Gender;
             pet.HealthIssues = petDto.HealthIssues;
             pet.Description = petDto.Description;
+            pet.Marriage = petDto.Marriage;
+            pet.Adoption = petDto.Adoption;
 
             if (petDto.Photos != null && petDto.Photos.Count > 0)
             {
@@ -261,11 +266,14 @@ public class PetController : ControllerBase
             Description = pet.Description,
             UserId = pet.UserId,
             PhotoUrls = pet.Photos.Select(p => p.ImageUrl).ToList(),
+            Marriage = pet.Marriage,
+            Adoption = pet.Adoption,
             Owner = pet.Owner != null ? new OwnerDto
             {
                 Id = pet.Owner.Id,
                 UserName = pet.Owner.UserName,
-                Email = pet.Owner.Email
+                Email = pet.Owner.Email,
+                PhoneNumber = pet.Owner.PhoneNumber
             } : null
         };
     }

@@ -5,7 +5,7 @@
 namespace GP.Migrations
 {
     /// <inheritdoc />
-    public partial class SlotsDelete : Migration
+    public partial class MarriageAdoption2 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

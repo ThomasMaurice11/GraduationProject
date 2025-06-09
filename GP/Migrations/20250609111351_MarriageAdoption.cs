@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace GP.Migrations
 {
     /// <inheritdoc />
-    public partial class FixedCascadePaths : Migration
+    public partial class MarriageAdoption : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -23,7 +23,9 @@ namespace GP.Migrations
                     FoundDate = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Gender = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HealthIssues = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CreationDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    CreationDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Adoption = table.Column<int>(type: "int", nullable: false),
+                    Marriage = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -258,13 +260,69 @@ namespace GP.Migrations
                     Gender = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HealthIssues = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Adoption = table.Column<int>(type: "int", nullable: false),
+                    Marriage = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Pets", x => x.PetId);
                     table.ForeignKey(
                         name: "FK_Pets_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "PetSitterRequests",
+                columns: table => new
+                {
+                    PetSitterRequestId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Number = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    StartDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    EndtDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    HealthIssues = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Breed = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Age = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Notes = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    RequestedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_PetSitterRequests", x => x.PetSitterRequestId);
+                    table.ForeignKey(
+                        name: "FK_PetSitterRequests_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Posts",
+                columns: table => new
+                {
+                    PostId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Breed = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Age = table.Column<int>(type: "int", nullable: false),
+                    LostDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    LostLocation = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Gender = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreationDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Posts", x => x.PostId);
+                    table.ForeignKey(
+                        name: "FK_Posts_AspNetUsers_UserId",
                         column: x => x.UserId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
@@ -425,6 +483,7 @@ namespace GP.Migrations
                     ImageData = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
                     ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PetId = table.Column<int>(type: "int", nullable: true),
+                    PostId = table.Column<int>(type: "int", nullable: true),
                     AnimalId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
@@ -440,6 +499,11 @@ namespace GP.Migrations
                         column: x => x.PetId,
                         principalTable: "Pets",
                         principalColumn: "PetId");
+                    table.ForeignKey(
+                        name: "FK_Photos_Posts_PostId",
+                        column: x => x.PostId,
+                        principalTable: "Posts",
+                        principalColumn: "PostId");
                 });
 
             migrationBuilder.CreateTable(
@@ -450,7 +514,9 @@ namespace GP.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ClinicId = table.Column<int>(type: "int", nullable: false),
                     StartTime = table.Column<TimeSpan>(type: "time", nullable: false),
-                    EndTime = table.Column<TimeSpan>(type: "time", nullable: false)
+                    EndTime = table.Column<TimeSpan>(type: "time", nullable: false),
+                    Disabled = table.Column<bool>(type: "bit", nullable: false),
+                    DisabledDate = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -474,7 +540,12 @@ namespace GP.Migrations
                     AppointmentDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
                     PatientNotes = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true),
-                    DoctorNotes = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true)
+                    DoctorNotes = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true),
+                    PetName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Breed = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PetType = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ReasonForVisit = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    SlotId1 = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -493,6 +564,11 @@ namespace GP.Migrations
                     table.ForeignKey(
                         name: "FK_Appointments_Slots_SlotId",
                         column: x => x.SlotId,
+                        principalTable: "Slots",
+                        principalColumn: "SlotId");
+                    table.ForeignKey(
+                        name: "FK_Appointments_Slots_SlotId1",
+                        column: x => x.SlotId1,
                         principalTable: "Slots",
                         principalColumn: "SlotId");
                 });
@@ -531,6 +607,11 @@ namespace GP.Migrations
                 name: "IX_Appointments_SlotId",
                 table: "Appointments",
                 column: "SlotId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Appointments_SlotId1",
+                table: "Appointments",
+                column: "SlotId1");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Appointments_UserId",
@@ -627,6 +708,11 @@ namespace GP.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_PetSitterRequests_UserId",
+                table: "PetSitterRequests",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Photos_AnimalId",
                 table: "Photos",
                 column: "AnimalId");
@@ -635,6 +721,16 @@ namespace GP.Migrations
                 name: "IX_Photos_PetId",
                 table: "Photos",
                 column: "PetId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Photos_PostId",
+                table: "Photos",
+                column: "PostId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Posts_UserId",
+                table: "Posts",
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Slots_ClinicId",
@@ -679,6 +775,9 @@ namespace GP.Migrations
                 name: "PetMarriageRequests");
 
             migrationBuilder.DropTable(
+                name: "PetSitterRequests");
+
+            migrationBuilder.DropTable(
                 name: "Photos");
 
             migrationBuilder.DropTable(
@@ -695,6 +794,9 @@ namespace GP.Migrations
 
             migrationBuilder.DropTable(
                 name: "Pets");
+
+            migrationBuilder.DropTable(
+                name: "Posts");
 
             migrationBuilder.DropTable(
                 name: "Clinics");

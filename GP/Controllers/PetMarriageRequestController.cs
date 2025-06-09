@@ -164,7 +164,8 @@ namespace GP.Controllers
                     Owner = new OwnerDto
                     {
                         Id = request.SenderPet.Owner.Id,
-                        UserName = request.SenderPet.Owner.UserName
+                        UserName = request.SenderPet.Owner.UserName,
+                        PhoneNumber = request.SenderPet.Owner.PhoneNumber
                     }
                 },
                 ReceiverPet = new PetResponseDto

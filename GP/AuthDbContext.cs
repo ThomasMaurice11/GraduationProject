@@ -151,25 +151,32 @@ namespace GP
             //});
             // Configure Appointment relationships
             // Configure Appointment relationships
+            // Appointment → Clinic
             modelBuilder.Entity<Appointment>()
                 .HasOne(a => a.Clinic)
                 .WithMany()
+                .HasForeignKey(a => a.ClinicId)
                 .OnDelete(DeleteBehavior.NoAction);
 
+            // Appointment → Slot
             modelBuilder.Entity<Appointment>()
                 .HasOne(a => a.Slot)
-                .WithMany()
+                .WithMany(s => s.Appointments)
+                .HasForeignKey(a => a.SlotId)
                 .OnDelete(DeleteBehavior.NoAction);
 
+            // Appointment → User
             modelBuilder.Entity<Appointment>()
                 .HasOne(a => a.User)
                 .WithMany()
-                .OnDelete(DeleteBehavior.Cascade); // Keep for user deletion
+                .HasForeignKey(a => a.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
 
-            // Configure Slot relationship
+            // Slot → Clinic
             modelBuilder.Entity<Slot>()
                 .HasOne(s => s.Clinic)
                 .WithMany()
+                .HasForeignKey(s => s.ClinicId)
                 .OnDelete(DeleteBehavior.NoAction);
 
             //// Configure Slot relationships
